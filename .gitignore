@@ -1,5 +1,0 @@
-.env
-*.sublime-*
-components/
-node_modules/
-.grunt/
