@@ -1,0 +1,42 @@
+:root{
+  --indent:10px;
+  font-family: "common sans",sans-serif;
+  line-height: 22px;
+  padding:20px;
+}
+.child{
+  /* display:none; */
+  /* font-size:10px; */
+}
+
+.key{
+  background-color: yellow;
+}
+
+.tree:not(.child){
+  /* font-size:20px; */
+}
+
+.depth2{
+  margin-left:var(--indent);
+}
+.depth3{
+  margin-left:calc(var(--indent)*2);
+}
+.depth4{
+  margin-left:calc(var(--indent)*3);
+}
+.depth5{
+  margin-left:calc(var(--indent)*4);
+}
+.depth6{
+  margin-left:calc(var(--indent)*5);
+}
+.depth7{
+  margin-left:calc(var(--indent)*6);
+}
+@font-face {
+  font-family: "common sans";
+  font-weight: 400;
+  src: url("fonts/common-sans-regular.otf") format("otf");
+}
