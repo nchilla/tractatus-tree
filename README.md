@@ -1,14 +1,30 @@
 # Another Tractatus Tree
 
+## The idea
 Reading through the Tractatus Logico-Philosophicus by Ludwig Wittgenstein in print, I was very disappointed that there was no visual hierarchy for the branches of propositions.
 
 This is how it looks:
 ![How the Tractatus appears in my printed edition](assets/tractatus-print.png)
 
-I think the issue is the sub-propositions go up to 5 layers in from the first parent (2.0.1.2.3.1). How do you elegantly, or just interestingly, format that much hierarchy and in doing so tell stories about the book, or specific propositions? I wnat to experiment with that.
+The issue is the sub-propositions go up to 5 layers in from the first parent (2.0.1.2.3.1). That's very difficult to elegantly format in a way that makes sense and is informative.
+
+I have two objectives:
+
+**In print** I want to take on the task of typesetting the Tractatus such that the hierarchy is present and informative.
+
+**On the web** I want to experiment with both informative and experimental digital formats to map/present propositions.
+
+## Ways other people have tried this
+
+I'm not the first person to have this idea! I've tracked down a collection of researchers who have tried to come up with innovative digital formats to read or visualize the Tractatus. Here are a few examples:
+c1|c2
+---|---
+![http://tractatus.lib.uiowa.edu/map/](assets/uiowa/png)|![https://pbellon.github.io/tractatus-tree/](assets/pierrebellon.png)
 
 
-Note: This is forked from [Pierre Bellon's](https://pbellon.github.io/#!/en) D3 hierarchy visualization of the Tractatus; I gutted the repo and kept the JSON he scraped from [here](https://people.umass.edu/klement/tlp/tlp.html), which I'll use for each visualization I make.
+
+
+This is forked from [Pierre Bellon's](https://pbellon.github.io/#!/en) D3 hierarchy visualization of the Tractatus; I gutted the repo and kept the JSON he scraped from [here](https://people.umass.edu/klement/tlp/tlp.html), which I'll use for each visualization I make.
 
 ## Development status:
 
