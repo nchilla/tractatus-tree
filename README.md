@@ -20,7 +20,7 @@ Here are some ideas I've thrown around so far — I'll build the first by Wednes
 
 * Interactive graphics for specific propositions or sets of propositions, possibly utilizing the graphics in the book.
   * Example: 5.5423 To perceive a complex means to perceive that its constituents are related to one another in such and such a way. This no doubt also explains why there are two possible ways of seeing the figure:
-  * ![cube](html_export/thecube.png)
+  * ![cube](html_export/tractatus_files/thecube.png)
   * as a cube; and all similar phenomena. For we really see two different facts. (If I look in the first place at the corners marked a and only glance at the b’s, then the a’s appear to be in front, and vice versa).
 
 
