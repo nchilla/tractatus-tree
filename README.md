@@ -14,6 +14,19 @@ I have two objectives:
 
 * **On the web** I want to experiment with both informative and experimental digital formats to map/present propositions.
 
+
+## Typography
+
+I want to keep my type choices consistent for each map/typeset version of the Tractatus I make. For that I'll need to settle on three styles:
+
+* **The body text**; I want a serif that feels contemporary and highly legible; it would also be interesting to reflect the logical dogma and philosophy of mathematics in this approach to language.
+  * I am thinking of using [Signifier](https://klim.co.nz/blog/signifier-design-information/): "Signifier emerged from this alchemy with Bézier curves and sharp vectors determined by machine logic and a Brutalist ethos"
+
+* **The "keys"** for each proposition; my natural inclination is to use a monospace for these
+
+* **The mathematical figures** in some propositions, which would be interesting to typeset distinctly in some way from the body (similar to `code` in a markdown file). I think I need either a typeface with [math support](https://www.tug.org/FontCatalogue/mathfonts.html), or a monospace of some type.
+
+
 ## Ways other people have tried this
 
 I'm not the first person to have this idea! I've tracked down a collection of researchers who have tried to come up with innovative digital formats to read or visualize the Tractatus. Here are a few examples:
