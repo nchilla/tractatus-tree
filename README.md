@@ -10,9 +10,9 @@ The issue is the sub-propositions go up to 5 layers in from the first parent (2.
 
 I have two objectives:
 
-**In print** I want to take on the task of typesetting the Tractatus such that the hierarchy is present and informative.
+* **In print** I want to take on the task of typesetting the Tractatus such that the hierarchy is present and informative.
 
-**On the web** I want to experiment with both informative and experimental digital formats to map/present propositions.
+* **On the web** I want to experiment with both informative and experimental digital formats to map/present propositions.
 
 ## Ways other people have tried this
 
