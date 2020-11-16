@@ -14,6 +14,12 @@ I have two objectives:
 
 * **On the web** I want to experiment with both informative and experimental digital formats to map/present propositions.
 
+## Wall Spaghetti:
+
+Here are some ideas I've thrown around so far — I'll build the first by Wednesday 11/18. See [my inspirations](#user-content-ways-other-people-have-tried-this) for context.
+
+
+
 
 ## Typography
 
