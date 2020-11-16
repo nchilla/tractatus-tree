@@ -31,9 +31,9 @@ Here my ideas so far — I'll build the first by Wednesday 11/18. See [predecess
   * I'm thinking of concentric circle groupings, like the ones people make in Prezi.
 
 * **Interactive graphics** for specific propositions or sets of propositions, possibly utilizing the graphics in the book. Here's an example:
-  * 5.5423 To perceive a complex means to perceive that its constituents are related to one another in such and such a way. This no doubt also explains why there are two possible ways of seeing the figure:
+  * 5.5423 *To perceive a complex means to perceive that its constituents are related to one another in such and such a way. This no doubt also explains why there are two possible ways of seeing the figure:*
   * ![cube](html_export/tractatus_files/thecube.png)
-  * as a cube; and all similar phenomena. For we really see two different facts. (If I look in the first place at the corners marked a and only glance at the b’s, then the a’s appear to be in front, and vice versa).
+  * *as a cube; and all similar phenomena. For we really see two different facts. (If I look in the first place at the corners marked a and only glance at the b’s, then the a’s appear to be in front, and vice versa).*
 
 
 
