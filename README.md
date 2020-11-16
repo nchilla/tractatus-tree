@@ -6,7 +6,7 @@ Reading through the Tractatus Logico-Philosophicus by Ludwig Wittgenstein in pri
 This is how it looks:
 ![How the Tractatus appears in my printed edition](assets/tractatus-print.png)
 
-The issue is the sub-propositions go up to 5 layers in from the first parent (2.0.1.2.3.1). That's very difficult to elegantly format in a way that makes sense and is informative.
+The issue is the sub-propositions go up to 5 layers in from the first parent (e.g. 2.0.1.2.3.1). That's very difficult to elegantly format in a way that makes sense and is informative.
 
 I have two objectives:
 
@@ -16,7 +16,13 @@ I have two objectives:
 
 ## Wall Spaghetti:
 
-Here are some ideas I've thrown around so far — I'll build the first by Wednesday 11/18. See [my inspirations](#user-content-ways-other-people-have-tried-this) for context.
+Here are some ideas I've thrown around so far — I'll build the first by Wednesday 11/18. See [predecessors](#user-content-ways-other-people-have-tried-this) for context.
+
+* Interactive graphics for specific propositions or sets of propositions, possibly utilizing the graphics in the book.
+  * Example: 5.5423 To perceive a complex means to perceive that its constituents are related to one another in such and such a way. This no doubt also explains why there are two possible ways of seeing the figure:
+  * ![cube](html_export/thecube.png)
+  * as a cube; and all similar phenomena. For we really see two different facts. (If I look in the first place at the corners marked a and only glance at the b’s, then the a’s appear to be in front, and vice versa).
+
 
 
 
