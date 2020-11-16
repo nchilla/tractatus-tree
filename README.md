@@ -16,7 +16,7 @@ I have two objectives:
 
 ## Wall Spaghetti:
 
-Here are some ideas I've thrown around so far — I'll build the first by Wednesday 11/18. See [predecessors](#user-content-ways-other-people-have-tried-this) for context.
+Here my ideas so far — I'll build the first by Wednesday 11/18. See [predecessors](#user-content-ways-other-people-have-tried-this) for context.
 
 * **A collapsible version** like [this](http://daxoliver.com/tractatus/) but with better typesetting and interactive features.
   * When only the main 1-7 propositions are open, the scale of the type goes up to fill the screen.
