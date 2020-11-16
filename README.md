@@ -24,7 +24,7 @@ Here my ideas so far — I'll build the first by Wednesday 11/18. See [predecess
 
 * **A "draggable" canvas tree map** such as what both Juliette and Alex suggested for my idea last week.
 
-* **A line hierarchy structure** similar to Tumblr/Reddit's form of visualizing comment threads.
+* **A line hierarchy structure** similar to Tumblr/Reddit's form of organizing comment threads.
   * I imagine this may work well for print because it's highly compact.
 
 * A version **visualization of the number of words/characters/sub-propositions** in props 1-7 through their scale/proportion.
