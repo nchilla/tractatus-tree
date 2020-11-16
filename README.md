@@ -24,6 +24,9 @@ Here are some ideas I've thrown around so far — I'll build the first by Wednes
 
 * A "draggable" canvas tree map such as what both Juliette and Alex suggested for my idea last week.
 
+* A line hierarchy structure similar to Tumblr/Reddit's form of visualizing comment threads.
+  * I imagine this may work well for print because it's highly compact.
+
 * A version that visualizes the number of words/characters/sub-propositions through the scale/proportion of props 1-7.
   * I'm thinking of concentric circle groupings, like the ones people make in Prezi.
 
