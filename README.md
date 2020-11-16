@@ -18,23 +18,22 @@ I have two objectives:
 
 Here are some ideas I've thrown around so far — I'll build the first by Wednesday 11/18. See [predecessors](#user-content-ways-other-people-have-tried-this) for context.
 
-* A collapsible version like [this](http://daxoliver.com/tractatus/) but with better typesetting and interactive features.
+* **A collapsible version** like [this](http://daxoliver.com/tractatus/) but with better typesetting and interactive features.
   * When only the main 1-7 propositions are open, the scale of the type goes up to fill the screen.
   * Could be understood as an accordion "nav menu" but not necessarily made to look that way graphically
 
-* A "draggable" canvas tree map such as what both Juliette and Alex suggested for my idea last week.
+* **A "draggable" canvas tree map** such as what both Juliette and Alex suggested for my idea last week.
 
-* A line hierarchy structure similar to Tumblr/Reddit's form of visualizing comment threads.
+* **A line hierarchy structure** similar to Tumblr/Reddit's form of visualizing comment threads.
   * I imagine this may work well for print because it's highly compact.
 
-* A version that visualizes the number of words/characters/sub-propositions through the scale/proportion of props 1-7.
+* A version **visualization of the number of words/characters/sub-propositions** in props 1-7 through their scale/proportion.
   * I'm thinking of concentric circle groupings, like the ones people make in Prezi.
 
-* Interactive graphics for specific propositions or sets of propositions, possibly utilizing the graphics in the book. Here's an example:
+* **Interactive graphics** for specific propositions or sets of propositions, possibly utilizing the graphics in the book. Here's an example:
   * 5.5423 To perceive a complex means to perceive that its constituents are related to one another in such and such a way. This no doubt also explains why there are two possible ways of seeing the figure:
   * ![cube](html_export/tractatus_files/thecube.png)
   * as a cube; and all similar phenomena. For we really see two different facts. (If I look in the first place at the corners marked a and only glance at the b’s, then the a’s appear to be in front, and vice versa).
-
 
 
 
