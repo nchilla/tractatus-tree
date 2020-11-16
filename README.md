@@ -40,7 +40,7 @@ Here my ideas so far — I'll build the first by Wednesday 11/18. See [predecess
 
 ## Typography
 
-I want to keep my type choices consistent for each map/typeset version of the Tractatus I make. For that I'll need to settle on three styles:
+I want to keep my type choices consistent across all the viewing/reading formats I design. For that I'll need to settle on three styles:
 
 * **The body text**; I want a serif that feels contemporary and highly legible; it would also be interesting to reflect the logical dogma and philosophy of mathematics in this approach to language.
   * I am thinking of using [Signifier](https://klim.co.nz/blog/signifier-design-information/): "Signifier emerged from this alchemy with Bézier curves and sharp vectors determined by machine logic and a Brutalist ethos"
