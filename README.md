@@ -24,7 +24,7 @@ Here are some ideas I've thrown around so far — I'll build the first by Wednes
 
 * A "draggable" canvas tree map such as what both Juliette and Alex suggested for my idea last week.
 
-* A version that reflects the number of characters or sub-propositions in the scale/proportion of 1-7.
+* A version that visualizes the number of words/characters/sub-propositions through the scale/proportion of props 1-7.
   * I'm thinking of concentric circle groupings, like the ones people make in Prezi.
 
 * Interactive graphics for specific propositions or sets of propositions, possibly utilizing the graphics in the book. Here's an example:
