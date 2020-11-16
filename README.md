@@ -26,11 +26,13 @@ c1|c2
 The sources and my growing collection can be found in [this Are.na channel](https://www.are.na/nico-chilla/tractatus-visualizations)
 
 
-This is forked from [Pierre Bellon's](https://pbellon.github.io/#!/en) D3 hierarchy visualization of the Tractatus; I gutted the repo and kept the JSON he scraped from [here](https://people.umass.edu/klement/tlp/tlp.html), which I'll use for each visualization I make.
 
 ## Development status:
 
-You can see my first version, a virtually unformatted DOM-dump, [here](https://nchilla.github.io/tractatus-tree/dom)
+
+This is forked from [Pierre Bellon's](https://pbellon.github.io/#!/en) D3 hierarchy visualization of the Tractatus; I gutted the repo and kept the JSON he scraped from [here](https://people.umass.edu/klement/tlp/tlp.html), which I'll use for each visualization I make.
+
+You can see my first test, an indented DOM-dump, [here](https://nchilla.github.io/tractatus-tree/dom)
 
 
 ### In Progress:
