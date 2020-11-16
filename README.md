@@ -42,7 +42,7 @@ Here my ideas so far — I'll build the first by Wednesday 11/18. See [predecess
 
 I want to keep my type choices consistent across all the viewing/reading formats I design. For that I'll need to settle on three styles:
 
-* **The body text**; I want a serif that feels contemporary and highly legible; it would also be interesting to reflect the logical dogma and philosophy of mathematics in this approach to language.
+* **The body text**; I want a serif that feels contemporary, highly legible, and not full of itself; I also want to reflect the logical dogma and philosophy of mathematics in this approach to language.
   * I am thinking of using [Signifier](https://klim.co.nz/blog/signifier-design-information/): "Signifier emerged from this alchemy with Bézier curves and sharp vectors determined by machine logic and a Brutalist ethos"
 
 * **The "keys"** for each proposition; my natural inclination is to use a monospace for these
