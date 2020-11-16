@@ -19,7 +19,7 @@ I have two objectives:
 I'm not the first person to have this idea! I've tracked down a collection of researchers who have tried to come up with innovative digital formats to read or visualize the Tractatus. Here are a few examples:
 c1|c2
 ---|---
-![http://tractatus.lib.uiowa.edu/map/](assets/uiowa/png)|![https://pbellon.github.io/tractatus-tree/](assets/pierrebellon.png)
+![http://tractatus.lib.uiowa.edu/map/](assets/uiowa.png)|![https://pbellon.github.io/tractatus-tree/](assets/pierrebellon.png)
 
 
 
