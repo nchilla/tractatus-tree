@@ -1,7 +1,7 @@
 # Another Tractatus Tree
 
 ## The idea
-Reading through the Tractatus Logico-Philosophicus by Ludwig Wittgenstein in print, I was very disappointed that there was no visual hierarchy for the branches of propositions.
+Reading through the Tractatus Logico-Philosophicus by Ludwig Wittgenstein in print, I was puzzled by the lack of visual hierarchy for the branches of propositions.
 
 This is how it looks:
 ![How the Tractatus appears in my printed edition](assets/tractatus-print.png)
@@ -20,6 +20,7 @@ I'm not the first person to have this idea! I've tracked down a collection of re
 c1|c2
 ---|---
 ![http://tractatus.lib.uiowa.edu/map/](assets/uiowa.png)|![https://pbellon.github.io/tractatus-tree/](assets/pierrebellon.png)
+![http://daxoliver.com/tractatus/](assets/daxoliver.png)|![http://www.tractatuslogico-philosophicus.com/](assets/tractatuscom.png)
 
 
 
