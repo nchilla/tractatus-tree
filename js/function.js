@@ -16,6 +16,12 @@ function buildBody(json){
 function sayChildren(object){
   object.children.forEach((item, i) => {
     var keyArray=item.data.key.split('.');
+    var keyDisplay=keyArray[0]+'.';
+
+    for(var i=1;i<keyArray.length;i++){
+      keyDisplay=keyDisplay+keyArray[i];
+    }
+
     var keyClass=keyArray.join('-');
     var keyParent=keyArray.slice(0,keyArray.length-1).join('-');
     highest=(item.depth>height)?item.data.key:highest;
@@ -23,8 +29,8 @@ function sayChildren(object){
     d3.select('#i'+keyParent)
       .append('div')
       .attr('id','i'+keyClass)
-      .attr('class',`depth${item.depth} tree ${item.depth>1?'child':''}`)
-      .html(`<span class="key">${item.data.key}</span>`+(item.data.empty==false?item.data.content.en:''));
+      .attr('class',`depth${item.depth} tree ${item.depth>1?'child':''} ${item.data.empty==true?'empty':''}`)
+      .html(`<span class="key">${keyDisplay}</span>`+(item.data.empty==false?item.data.content.en:''));
     if(item.children){sayChildren(item);};
   });
 

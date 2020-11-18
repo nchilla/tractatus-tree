@@ -1,7 +1,7 @@
 :root{
   --indent:10px;
-  font-family: "common sans",sans-serif;
-  line-height: 22px;
+  --omargin:40px;
+  --content-column:100px;
   padding:20px;
 }
 .child{
@@ -9,10 +9,62 @@
   /* font-size:10px; */
 }
 
-.key{
-  background-color: yellow;
+body{
+  display:grid;
+  gap: 0px 10px;
+  grid-template-columns:var(--omargin) 1fr repeat(8,var(--content-column)) 1fr var(--omargin);
+}
+#i{
+  grid-column: 4 / 10;
 }
 
+p,span{
+  font-family: "Signifier Test",sans-serif;
+  font-size:20px;
+}
+
+var{
+  font-family: "FiraCode";
+  font-weight: 400;
+  background-color:#F2F2F2;
+  padding:2px;
+  border-radius: 25%;
+}
+
+p{
+  line-height: 27px;
+  margin-bottom: 10px;
+}
+svg{
+    max-width: 50%;
+}
+
+.smallsvg{
+  max-width: 20%;
+}
+
+.empty>.key{
+  display:none;
+}
+
+/* div p:first-of-type{
+  display:inline;
+} */
+
+span.lowered {
+    vertical-align: -0.5ex;
+}
+
+.key{
+  display:inline-block;
+  padding:2px;
+  margin-bottom:5px;
+  border:2px solid #24EA8B;
+  margin-right:10px;
+}
+.tree{
+  margin-bottom: 20px;
+}
 .tree:not(.child){
   /* font-size:20px; */
 }
@@ -35,8 +87,94 @@
 .depth7{
   margin-left:calc(var(--indent)*6);
 }
+
+/* inherited --------*/
+
+.possibilities{
+  display: inline-table;
+  vertical-align: middle;
+  border-collapse: collapse;
+  border: none;
+  margin: 0px;
+  padding: 0px;
+  text-indent: 0px;
+}
+td.summationtop {
+    text-align: center;
+    vertical-align: bottom;
+    padding-bottom: 0px;
+}
+td.middleleft{
+    vertical-align: middle;
+}
+td.middleright {
+    vertical-align: middle;
+    text-align: right;
+}
+span.largeparen {
+    font-size: 250%;
+    vertical-align: middle;
+}
+td.middlecenter {
+    vertical-align: middle;
+    text-align: center;
+}
+td.summationmiddle {
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.smallvar {
+    font-size: 80%;
+}
+span.largeop {
+    font-size: 200%;
+}
+
+.mathrel,.mathop{
+  padding-bottom: 4px;
+  display: inline-block;
+}
+
+sup{
+  vertical-align: super;
+  font-size: smaller;
+}
+
+/* .mathrel {
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+}
+.mathop {
+    padding-right: 0.15em;
+} */
+.centered{
+  text-align: center;
+}
+.sfmiddle{
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
 @font-face {
-  font-family: "common sans";
+  font-family: "Signifier Test";
   font-weight: 400;
-  src: url("fonts/common-sans-regular.otf") format("otf");
+  src: url("../fonts/signifier-test-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Signifier Test";
+  font-weight: 400;
+  font-style: italic;
+  src: url("../fonts/signifier-test-regular-italic.woff") format("woff");
+}
+@font-face {
+  font-family: 'FiraCode';
+  src: url('../fonts/FiraCode-VariableFont:wght.ttf') format('truetype');
+  font-weight: 1 999;
 }

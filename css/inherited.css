@@ -1,0 +1,390 @@
+
+
+body {
+    text-align: justify;
+    line-height: 1.2;
+    font-family: serif;
+    font-size: 16px;
+}
+svg {
+    background-color: transparent;
+}
+h1 {
+    text-align: center;
+}
+h2, h4, h3 {
+    text-align: left;
+}
+h1.germantitle {
+    font-style: italic;
+}
+h3.pubinfo, h3.byline {
+    text-align: center;
+}
+h3.byline {
+    text-align: center;
+}
+.motto {
+    margin-top: 12ex;
+    margin-bottom: 15ex;
+    text-align: center;
+}
+.dedicationtext {
+    margin-top: 5ex;
+    text-align: center;
+    font-variant: small-caps;
+}
+em.germph {
+    letter-spacing: 0.2em;
+    padding-left: 0.2em;
+    font-style: normal;
+    font-weight: normal;
+}
+var {
+    padding-right: 2px;
+}
+#dedication {
+    text-align: center;
+    margin-top: 100px;
+}
+p, div.para {
+    text-indent: 1em;
+    margin-top: 0ex;
+    margin-bottom: 0ex;
+}
+.openingpar {
+    text-indent: 0em;
+}
+.corelinks, .preflinks {
+    margin-top: 1ex;
+}
+.flushright, .para.flushright {
+    text-indent: 0em;
+    text-align: right;
+}
+.versionbigdiv {
+    margin-bottom: 4ex;
+}
+table {
+    border-collapse: collapse;
+    border: none;
+    margin: 0px;
+    text-indent: 0em;
+}
+.textsc {
+    font-variant: small-caps;
+}
+.linkarray {
+    font-family: sans-serif;
+    font-size: 60%;
+}
+.overlined {
+    text-decoration: overline;
+}
+.nop, .nop var {
+    font-style: normal;
+}
+.quant {
+    padding-right: 0.2em;
+    white-space: nowrap;
+}
+.mathrel {
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+}
+sup .mathrel {
+    padding-left: 0em;
+    padding-right: 0em;
+}
+.mathop {
+    padding-right: 0.15em;
+}
+table.fnlist {
+    border-collapse: collapse;
+    border: none;
+    vertical-align: top;
+    font-size: 70%;
+}
+table.fnlist td {
+    vertical-align: top;
+}
+td.righttight {
+    padding: 0px;
+    border: none;
+    margin: 0px;
+    text-align: right;
+    vertical-align: top;
+}
+td.centertight {
+    padding: 0px;
+    border: none;
+    margin: 0px;
+    text-align: center;
+    vertical-align: top;
+}
+td.lefttight {
+    padding: 0px;
+    border: none;
+    margin: 0px;
+    text-align: left;
+    vertical-align: top;
+}
+table.alignedmath tr td.righttight {
+    padding: 0px;
+    border: none;
+    margin: 0px;
+    text-align: right;
+    vertical-align: baseline;
+}
+table.alignedmath tr td.centertight {
+    padding: 0px;
+    border: none;
+    margin: 0px;
+    text-align: center;
+    vertical-align: baseline;
+}
+table.alignedmath {
+    margin-left: auto;
+    margin-right: auto;
+    text-indent: 0pt;
+}
+table.alignedmath tr td.lefttight {
+    padding: 0px;
+    border: none;
+    margin: 0px;
+    text-align: left;
+    vertical-align: baseline;
+}
+span.mathrm, span.mathrm var {
+    font-style: normal;
+}
+ul.desc {
+    list-style-type: none;
+}
+.prefacetable, .bodytable {
+    width: 100%;
+}
+.prefheadercell {
+    width: 33%;
+    padding: 10px;
+    font-weight: bold;
+}
+td.gerpref, td.ogdpref, td.pmcpref {
+    width: 33%;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-indent: 1em;
+    vertical-align: top;
+}
+td.gerpref, td.ger {
+    background-color: LightYellow;
+}
+td.ogdpref, td.ogd {
+    background-color: AliceBlue;
+}
+td.pmcpref, td.pmc {
+    background-color: MistyRose;
+}
+#pref9 td, .prefacediv p:last-child {
+    text-align: right;
+    padding-right: 0.5em;
+}
+#pref9 td em, .prefacediv p:last-child em {
+    display: block;
+    text-align: left;
+    text-indent: 0em;
+}
+th.numheader {
+    width: 7%;
+    padding: 10px;
+    font-weight: bold;
+}
+th.headercell {
+    width: 31%;
+    padding: 10px;
+    font-weight: bold;
+}
+td.pnum {
+    width: 5.5%;
+    padding-right: 10px;
+    text-indent: 0em;
+    text-align: right;
+    font-weight: bold;
+    vertical-align: top;
+}
+td.ger, td.ogd, td.pmc {
+    width: 31.5%;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-indent: 1em;
+    vertical-align: top;
+}
+.noindent, .para.noindent {
+    text-indent: 0;
+}
+div.centered {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+#indexdiv div.centered {
+    margin-top: 1ex;
+    margin-bottom: 2ex;
+}
+div.centeredsqueeze {
+    line-height: 0.7;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+div.centeredspacebelow {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 1.5ex;
+}
+span.summation {
+    text-indent: 0px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1;
+}
+span.padrthree {
+    padding-right: 3em;
+}
+.smallvar {
+    font-size: 80%;
+}
+span.largeop {
+    font-size: 200%;
+}
+span.largeparen {
+    font-size: 250%;
+    vertical-align: middle;
+}
+span.binom {
+    text-indent: 0px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 0.9;
+}
+table.truthtable {
+    border-collapse: collapse;
+    display:inline-block;
+    vertical-align: middle;
+}
+table.truthtable th.l {
+    border-bottom:3px double black;
+    border-right:1px solid black;
+    padding: 4px;
+    text-align: center;
+    font-weight: normal;
+}
+table.truthtable th.m {
+    border-bottom:3px double black;
+    border-right:1px solid black;
+    padding: 4px;
+    text-align: center;
+    font-weight: normal;
+}
+table.truthtable th.e {
+    border-bottom:3px double black;
+    border-right:none;
+    padding: 4px;
+    text-align: center;
+    font-weight: normal;
+}
+table.truthtable td.l {
+    border-bottom:1px solid black;
+    border-right:1px solid black;
+    padding: 4px;
+    text-align: center;
+}
+table.truthtable td.m {
+    border-bottom:1px solid black;
+    border-right:1px solid black;
+    padding: 4px;
+    text-align: center;
+}
+table.truthtable td.e {
+    border-bottom:1px solid black;
+    border-right:none;
+    padding: 4px;
+    text-align: center;
+}
+
+
+span.latex {
+    letter-spacing: 1px;
+}
+span.latex sup {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85em;
+    vertical-align: 0.2em;
+    margin-left: -0.36em;
+    margin-right: -0.15em;
+}
+span.latex sub {
+    text-transform: uppercase;
+    vertical-align: -0.4ex;
+    margin-left: -0.1667em;
+    margin-right: -0.125em;
+    font-size: 1em;
+}
+object {
+    background-color: transparent;
+}
+.sflabel {
+    vertical-align: middle;
+    font-family: sans-serif;
+}
+
+span.sfmiddle {
+    vertical-align: middle;
+    font-family: sans-serif;
+}
+
+
+span.lowered {
+    vertical-align: -0.5ex;
+}
+span.nudgedown {
+    vertical-align: -0.2ex;
+}
+table.possibilities {
+    display: inline-table;
+    vertical-align: middle;
+    border-collapse: collapse;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    text-indent: 0px;
+}
+td.middleright {
+    vertical-align: middle;
+    text-align: right;
+}
+td.middlecenter {
+    vertical-align: middle;
+    text-align: center;
+}
+td.middleleft {
+    vertical-align: middle;
+    text-align: left;
+}
+td.summationtop {
+    text-align: center;
+    vertical-align: bottom;
+    padding-bottom: 0px;
+}
+td.summationmiddle {
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+td.summationbottom {
+    text-align: center;
+    padding-top: 0px;
+}
