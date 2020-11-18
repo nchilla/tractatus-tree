@@ -16,7 +16,7 @@ I have two objectives:
 
 ## Wall Spaghetti:
 
-Here my ideas so far — I'll build the first by Wednesday 11/18. See [predecessors](#user-content-ways-other-people-have-tried-this) for context.
+Here are my ideas so far. See [predecessors](#user-content-ways-other-people-have-tried-this) for context.
 
 * **A collapsible version** like [this](http://daxoliver.com/tractatus/) but with better typesetting and interactive features.
   * When only the main 1-7 propositions are open, the scale of the type goes up to fill the screen.
@@ -30,12 +30,7 @@ Here my ideas so far — I'll build the first by Wednesday 11/18. See [predecess
 * A version **visualization of the number of words/characters/sub-propositions** in props 1-7 through their scale/proportion.
   * I'm thinking of concentric circle groupings, like the ones people make in Prezi.
 
-* **Interactive graphics** for specific propositions or sets of propositions, possibly utilizing the graphics in the book. Here's an example:
-  * 5.5423 *To perceive a complex means to perceive that its constituents are related to one another in such and such a way. This no doubt also explains why there are two possible ways of seeing the figure:*
-  * ![cube](html_export/tractatus_files/thecube.png)
-  * *as a cube; and all similar phenomena. For we really see two different facts. (If I look in the first place at the corners marked a and only glance at the b’s, then the a’s appear to be in front, and vice versa).*
-
-
+* **Interactive graphics** for specific propositions or sets of propositions, possibly utilizing the graphics in the book.
 
 
 ## Typography
@@ -71,6 +66,7 @@ This is forked from [Pierre Bellon's](https://pbellon.github.io/#!/en) D3 hierar
 You can see my first test, an indented DOM-dump, [here](https://nchilla.github.io/tractatus-tree/dom)
 
 
-### In Progress:
-* Change preface from Ogden version to Pears/McGuinness to match the rest
-* Fix image filepaths
+### In Progress/to-do:
+* "Scrollcards" and "Nodes" ideas are a work in progress.
+* Find sections missing from the scrape and add them to the JSON. So far I've noticed problems with:
+  * 5.101

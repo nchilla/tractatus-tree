@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" >
+    <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1">
+    <title>Another Tractatus Tree</title>
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="../../css/clearstyle.css">
+    <link rel="stylesheet" href="scrollcards/scrollcards.css">
+    <!-- hosted typography -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="grid">
+      <div id="i">
+
+      </div>
+    </div>
+
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script>
+      fetch("../../data/tractatus.json")
+        .then(function(tractatus){ return tractatus.json(); })
+        .then(function(json){ buildBody(json); });
+    </script>
+    <script src="scrollcards/smoothscroll.min.js" charset="utf-8"></script>
+    <script src="scrollcards/scrollcards.js" charset="utf-8"></script>
+  </body>
+</html>

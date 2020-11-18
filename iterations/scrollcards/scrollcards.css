@@ -1,0 +1,219 @@
+:root{
+  --indent:10px;
+  --omargin:40px;
+  --content-column:100px;
+}
+
+#grid{
+  width:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  transition:top 0.7s;
+  /* display:grid;
+  gap: 0px 10px;
+  grid-template-columns:var(--omargin) 1fr repeat(8,var(--content-column)) 1fr var(--omargin); */
+}
+
+
+#i{
+  width:80vw;
+  margin:auto;
+  min-height: 700vh;
+  box-sizing: border-box;
+}
+
+
+#i0{
+  display:none;
+}
+
+.primary{
+  height:100vh;
+  position:absolute;
+  /* top:min(-2.8vw, -20px); */
+  font-family: "Signifier Test","Crimson Text",serif;
+  font-size: max(2.6vw, 28px);
+  line-height: max(4.1vw,32px);
+  padding-top:50vh;
+  width:80vw;
+}
+.content{
+  transition:translateY 0.3s;
+  position:relative;
+}
+
+.tree:not(.empty) .content{
+  /* cursor:pointer; */
+}
+
+.primary>.content{
+  transform:translateY(-50%);
+}
+
+#i1{
+  top:0vh;
+}
+#i2{
+  top:100vh;
+}
+#i3{
+  top:200vh;
+}
+#i4{
+  top:300vh;
+}
+#i5{
+  top:400vh;
+}
+#i6{
+  top:500vh;
+}
+#i7{
+  top:600vh;
+}
+
+
+.child{
+  font-family: "Signifier Test",sans-serif;
+  font-size:20px;
+  display:none;
+  opacity:0;
+  transition: opacity 0.5s;
+}
+
+/* span{
+  font-family: "Signifier Test",sans-serif;
+  font-size:20px;
+} */
+
+/* var{
+  font-family: "FiraCode";
+  font-weight: 400;
+  background-color:#F2F2F2;
+  padding:2px;
+  border-radius: 25%;
+} */
+
+
+
+
+svg{
+    max-width: 50%;
+}
+
+.smallsvg{
+  max-width: 20%;
+}
+
+.empty>.key{
+  display:none;
+}
+
+
+.key{
+  position:absolute;
+  transform:translateX(-100%);
+  top:0;
+  left:-10px;;
+}
+
+
+
+/* inherited --------*/
+
+.possibilities{
+  display: inline-table;
+  vertical-align: middle;
+  border-collapse: collapse;
+  border: none;
+  margin: 0px;
+  padding: 0px;
+  text-indent: 0px;
+}
+td.summationtop {
+    text-align: center;
+    vertical-align: bottom;
+    padding-bottom: 0px;
+}
+td.middleleft{
+    vertical-align: middle;
+}
+td.middleright {
+    vertical-align: middle;
+    text-align: right;
+}
+span.largeparen {
+    font-size: 250%;
+    vertical-align: middle;
+}
+td.middlecenter {
+    vertical-align: middle;
+    text-align: center;
+}
+td.summationmiddle {
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.smallvar {
+    font-size: 80%;
+}
+span.largeop {
+    font-size: 200%;
+}
+
+.mathrel,.mathop{
+  padding-bottom: 4px;
+  display: inline-block;
+}
+
+sup{
+  vertical-align: super;
+  font-size: smaller;
+}
+
+/* .mathrel {
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+}
+.mathop {
+    padding-right: 0.15em;
+} */
+.centered{
+  text-align: center;
+}
+.sfmiddle{
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+@font-face {
+  font-family: "Signifier Test";
+  font-weight: 400;
+  src: url("../../fonts/signifier-test-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Signifier Test";
+  font-weight: 400;
+  font-style: italic;
+  src: url("../../fonts/signifier-test-regular-italic.woff") format("woff");
+}
+
+/* @font-face {
+  font-family: 'CrimsonText';
+  src: url('../fonts/FiraCode-VariableFont:wght.ttf') format('truetype');
+  font-weight: 1 999;
+} */
+
+/* @font-face {
+  font-family: 'FiraCode';
+  src: url('../fonts/FiraCode-VariableFont:wght.ttf') format('truetype');
+  font-weight: 1 999;
+} */
