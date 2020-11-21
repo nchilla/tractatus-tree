@@ -35,10 +35,14 @@ function populate(parent,startInd){
     var domClass=`prop ${(isParent?'parent':'')}`;
     layer.append('div').attr('class',domClass).datum(trunk[i]).attr('id','p'+key.dom).html(item.content.en);
     d3.select('#p'+key.dom).insert('span',':first-child').attr('class','key').html(key.display);
+    if(isParent){
+      var lastChild=d3.select('#p'+key.dom).node().lastChild;
+      d3.select(lastChild).append('span').attr('class','open-children').html(`[${trunk[i].children.length}]→`);
+    }
     resetFocus(depth);
   }
 
-  layer.selectAll('.parent').on('click',open)
+  layer.selectAll('.open-children').on('click',open)
 
 }
 
@@ -53,7 +57,7 @@ function resetFocus(crosshair){
 
 
 function open(){
-  populate(d3.select(this).datum(),0);
+  populate(d3.select(this.parentNode.parentNode).datum(),0);
 }
 
 function parseKey(key){
@@ -77,9 +81,14 @@ function parseKey(key){
 
 function toggleWin(){
   var header=d3.select('#header-bar');
+  var sheets=d3.selectAll('.sheet')
   if(header.classed('minimized')){
     header.classed('minimized',false);
+    sheets.style('padding-top','60px');
+    d3.select('#window-minmax').html('-');
   }else{
     header.classed('minimized',true);
+    sheets.style('padding-top','100px');
+    d3.select('#window-minmax').html('+');
   }
 }

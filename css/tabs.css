@@ -18,10 +18,16 @@ body{
 
 
 
-.key,.math{
+.key,.math,.open-children{
   font-family: aktiv-grotesk,sans-serif;
   font-weight: 300;
   font-style: normal;
+}
+.open-children{
+  color: #3DEA5A;
+  /* border-bottom:1px solid #3DEA5A; */
+  margin-left: 5px;
+  cursor:pointer;
 }
 
 .math{
@@ -86,6 +92,8 @@ sup{
   bottom:0px;
   right:0;
   cursor:pointer;
+  opacity:0;
+  width:0;
 }
 
 #head-background{
@@ -136,9 +144,11 @@ sup{
   border-radius: 20px;
   padding:10px;
 }
+
 #header-bar.minimized #window-minmax{
   top:5px;
   left:-30px;
+  background-color: white;
 }
 
 #header-bar.minimized #head-background{
@@ -232,7 +242,7 @@ sup{
   transition-delay: 0.1s;
 }
 .parent{
-  cursor:pointer;
+  /* cursor:pointer; */
 }
 
 /* media queries ------*/
