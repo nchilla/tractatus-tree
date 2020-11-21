@@ -19,16 +19,19 @@ body{
 }
 
 p,span{
-  font-family: "Signifier Test",sans-serif;
+  font-family: "Signifier Test",aktiv-grotesk,sans-serif;
   font-size:20px;
 }
 
 var{
-  font-family: "FiraCode";
-  font-weight: 400;
   background-color:#F2F2F2;
   padding:2px;
   border-radius: 25%;
+}
+.symbol,var{
+  font-family: aktiv-grotesk,sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 p{
@@ -56,11 +59,17 @@ span.lowered {
 }
 
 .key{
+  font-family: aktiv-grotesk,sans-serif;
+  font-weight: 400;
+  font-style: normal;
   display:inline-block;
-  padding:2px;
   margin-bottom:5px;
-  border:2px solid #24EA8B;
+  padding:2px;
+  /* border:2px solid #24EA8B; */
   margin-right:10px;
+}
+.key::before{
+  content:'↳';
 }
 .tree{
   margin-bottom: 20px;

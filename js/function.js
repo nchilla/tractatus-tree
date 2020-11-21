@@ -16,7 +16,11 @@ function buildBody(json){
 function sayChildren(object){
   object.children.forEach((item, i) => {
     var keyArray=item.data.key.split('.');
-    var keyDisplay=keyArray[0]+'.';
+    if(keyArray.length>1){
+      var keyDisplay=keyArray[0]+'.';
+    }else{
+      var keyDisplay=keyArray[0];
+    }
 
     for(var i=1;i<keyArray.length;i++){
       keyDisplay=keyDisplay+keyArray[i];

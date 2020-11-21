@@ -69,4 +69,9 @@ You can see my first test, an indented DOM-dump, [here](https://nchilla.github.i
 ### In Progress/to-do:
 * "Scrollcards" and "Nodes" ideas are a work in progress.
 * Find sections missing from the scrape and add them to the JSON. So far I've noticed problems with:
-  * 5.101
+  * missing content:
+    * 5.101 
+  * redraw graphic:
+    * 6.36111
+  * wrap full expression:
+    * 5.525,5.5301,5.5351,5.5352
