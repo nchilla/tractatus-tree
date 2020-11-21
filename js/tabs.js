@@ -19,6 +19,8 @@ function setUp(json){
       resetFocus(ind);
     }
   })
+  d3.select('#window-minmax').on('click',toggleWin);
+  // $('#header-bar').draggable();
 }
 
 function populate(parent,startInd){
@@ -71,4 +73,13 @@ function parseKey(key){
 
   return {array:keyArray,display:keyDisplay,dom:keyClass,parent:keyParent}
 
+}
+
+function toggleWin(){
+  var header=d3.select('#header-bar');
+  if(header.classed('minimized')){
+    header.classed('minimized',false);
+  }else{
+    header.classed('minimized',true);
+  }
 }

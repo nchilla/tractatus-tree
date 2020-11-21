@@ -1,11 +1,20 @@
 
 
-/* typography----------- */
 
-.sheet{
+:root{
+  --gray:rgba(0, 0, 0,0.05);
+}
+
+/* typography----------- */
+body{
   font-size:25px;
   line-height: 30px;
 }
+
+/* .sheet{
+  font-size:25px;
+  line-height: 30px;
+} */
 
 
 
@@ -16,13 +25,13 @@
 }
 
 .math{
-  background-color: rgba(0,0,0,0.05);
+  background-color: var(--gray);
   padding:3px;
   border-radius: 5px;
 }
 
 table{
-  background-color: rgba(0,0,0,0.05);
+  background-color: var(--gray);
   padding:3px;
   border-radius: 5px;
   font-family: aktiv-grotesk,sans-serif;
@@ -40,7 +49,9 @@ p{
   font-weight: 300;
   margin-bottom:10px;
   -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
+
 em{
   font-style: italic;
 }
@@ -49,7 +60,114 @@ sup{
   font-size: smaller;
 }
 
+/* header window -------- */
+#header-bar{
+  position:fixed;
+  display:inline-block;
+  padding:20px;
+
+  /* cursor:move; */
+  /* border-radius:10px; */
+  left:50vw;
+  top:50vh;
+  transform:translate(-50%,-50%);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#header-bar p,svg,span{
+  position:relative;
+  z-index:10;
+}
+#header-bar .math{
+  padding-left: 6px;
+  padding-right: 6px;
+  position:absolute;
+  bottom:0px;
+  right:0;
+  cursor:pointer;
+}
+
+#head-background{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color: white;
+  box-shadow: 5px 5px 24px 0px rgba(0, 0, 0, 0.23);
+  z-index:3;
+}
+
+#title{
+  width: min(max(77vw,616px),900px);
+}
+
+#header-bar p{
+  text-align: center;
+  margin-top:10px;
+  margin-bottom: 20px;
+}
+
+#window-minmax{
+  font-family: aktiv-grotesk,sans-serif;
+  font-size:30px;
+  font-weight: 300;
+  padding-top:2px;
+  position:absolute;
+  z-index:4;
+  top:-20px;
+  left:-20px;
+  border-radius: 50%;
+  background-color: #F6FFCC;
+  box-sizing: border-box;
+  width: 40px;
+  height:40px;
+  box-shadow: 5px 5px 24px 0px rgba(0, 0, 0, 0.1);
+  cursor:pointer;
+}
+
+#header-bar.minimized{
+  top:10px;
+  left:30px;
+  transform:translate(0%,0%);
+  display:flex;
+  flex-flow: row nowrap;
+  border-radius: 20px;
+  padding:10px;
+}
+#header-bar.minimized #window-minmax{
+  top:5px;
+  left:-30px;
+}
+
+#header-bar.minimized #head-background{
+  border-radius: 20px;
+}
+
+#header-bar.minimized p{
+  margin-top:0px;
+  margin-bottom:0px;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+#header-bar.minimized p::before{
+  content:'Tractatus | ';
+}
+
+#header-bar.minimized .math{
+  position:relative;
+  display:inline-block;
+}
+
+#header-bar.minimized svg{
+  display:none;
+}
+
 /* outer layout --------------*/
+
+
+
 #fixed-wrapper{
   position:fixed;
   top:0;
@@ -67,8 +185,8 @@ sup{
   box-shadow: 5px 0px 23px 0px rgba(0, 0, 0, 0.15);
   /* display:none; */
   padding:40px;
-  padding-top:60px;
-  padding-bottom:0px;
+  padding-top:100px;
+  padding-bottom:20px;
   box-sizing: border-box;
   overflow:scroll;
   max-width: 720px;
@@ -91,9 +209,9 @@ sup{
   display:none;
 }
 
-.sheet:not(.visible ~ .sheet){
+/* .sheet:not(.visible ~ .sheet){
   background-color:green;
-}
+} */
 
 
 #d0{
@@ -111,10 +229,52 @@ sup{
   float:right;
   width:100%;
   transition: opacity 0.2s;
-  transition-delay: 0.2s;
+  transition-delay: 0.1s;
 }
 .parent{
   cursor:pointer;
+}
+
+/* media queries ------*/
+
+@media(hover:hover){
+  .prev:hover{
+    max-width: 200px;
+  }
+  .prev:hover .prop{
+    opacity:1;
+  }
+}
+
+@media(max-width:800px){
+  #header-bar{
+    width:100vw;
+    left:0;
+    transform:translate(0%,-50%);
+    /* padding-bottom:40px; */
+  }
+  #window-minmax{
+    left:calc(50% - 20px);
+    top:auto;
+    bottom:-20px;
+  }
+}
+
+@media(max-width:600px){
+  body{
+    font-size:18px;
+    line-height: 25px;
+  }
+  #title{
+    width: 90vw;
+  }
+  .sheet{
+    padding:20px;
+  }
+  .prop{
+    min-width:300px;
+  }
+
 }
 
 /* inherited --------*/

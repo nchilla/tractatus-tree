@@ -2,8 +2,9 @@
 
 ## Iteration directory:
 
-* ["dom dump"](https://nchilla.github.io/tractatus-tree/dom)
-* [tabs](https://nchilla.github.io/tractatus-tree/tabs)
+["dom dump"](https://nchilla.github.io/tractatus-tree/dom)
+
+[tabs](https://nchilla.github.io/tractatus-tree/tabs)
 
 
 ## The idea
@@ -19,6 +20,29 @@ I have two objectives:
 * **In print** I want to take on the task of typesetting the Tractatus such that the hierarchy is present and informative.
 
 * **On the web** I want to experiment with both informative and experimental digital formats to map/present propositions.
+
+## Development status:
+
+
+This is forked from [Pierre Bellon's](https://pbellon.github.io/#!/en) D3 hierarchy visualization of the Tractatus; I gutted the repo and kept the JSON he scraped from [here](https://people.umass.edu/klement/tlp/tlp.html), which I'll use for each visualization I make.
+
+You can see my first test, an indented DOM-dump, [here](https://nchilla.github.io/tractatus-tree/dom)
+
+
+### In Progress/to-do:
+* For "tabs" iteration:
+  * tab markers
+  * mobile view
+  * better indicator for when a prop has children, maybe with a counter
+  * way to search for props, and URL queries
+* Find sections missing from the scrape and add them to the JSON. So far I've noticed problems with:
+  * missing content:
+    * 5.101
+  * redraw graphic:
+    * 6.36111
+  * wrap full expression:
+    * 6, 5.5301, 5.525, 5.5301, 5.5351, 5.5352
+
 
 ## Wall Spaghetti:
 
@@ -60,23 +84,3 @@ c1|c2
 ![https://people.umass.edu/klement/tlp/tlp.html](assets/klement.png)|![https://chart-studio.plotly.com/~greicius/2/tractatus-logico-philosophicus/?share_key=EhGs4nhYbvwLzr9HFSn6Ul#/plot](assets/plotly.png)
 
 The sources and my growing collection can be found in [this Are.na channel](https://www.are.na/nico-chilla/tractatus-visualizations)
-
-
-
-## Development status:
-
-
-This is forked from [Pierre Bellon's](https://pbellon.github.io/#!/en) D3 hierarchy visualization of the Tractatus; I gutted the repo and kept the JSON he scraped from [here](https://people.umass.edu/klement/tlp/tlp.html), which I'll use for each visualization I make.
-
-You can see my first test, an indented DOM-dump, [here](https://nchilla.github.io/tractatus-tree/dom)
-
-
-### In Progress/to-do:
-* "Scrollcards" and "Nodes" ideas are a work in progress.
-* Find sections missing from the scrape and add them to the JSON. So far I've noticed problems with:
-  * missing content:
-    * 5.101
-  * redraw graphic:
-    * 6.36111
-  * wrap full expression:
-    * 6, 5.5301, 5.525, 5.5301, 5.5351, 5.5352
