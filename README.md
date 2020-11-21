@@ -40,10 +40,9 @@ I want to keep my type choices consistent across all the viewing/reading formats
 * **The body text**; I want a serif that feels contemporary, highly legible, and not full of itself; I also want to reflect the logical dogma and philosophy of mathematics in this approach to language.
   * I am thinking of using [Signifier](https://klim.co.nz/blog/signifier-design-information/): "Signifier emerged from this alchemy with Bézier curves and sharp vectors determined by machine logic and a Brutalist ethos"
 
-* **The "keys"** for each proposition; my natural inclination is to use a monospace for these
+* **The mathematical figures** in some propositions will like use [Aktiv Grotesk](https://fonts.adobe.com/fonts/aktiv-grotesk) because of its glorious math support.
 
-* **The mathematical figures** in some propositions, which would be interesting to typeset distinctly in some way from the body (similar to `code` in a markdown file). I think I need either a typeface with [math support](https://www.tug.org/FontCatalogue/mathfonts.html), or a monospace of some type.
-
+* **The "keys"** for each proposition, which I think will also be in Aktiv.
 
 ## Ways other people have tried this
 
@@ -70,8 +69,8 @@ You can see my first test, an indented DOM-dump, [here](https://nchilla.github.i
 * "Scrollcards" and "Nodes" ideas are a work in progress.
 * Find sections missing from the scrape and add them to the JSON. So far I've noticed problems with:
   * missing content:
-    * 5.101 
+    * 5.101
   * redraw graphic:
     * 6.36111
   * wrap full expression:
-    * 5.525,5.5301,5.5351,5.5352
+    * 6, 5.5301, 5.525, 5.5301, 5.5351, 5.5352
