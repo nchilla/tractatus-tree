@@ -1,5 +1,11 @@
 # Another Tractatus Tree
 
+## Iteration directory:
+
+* ["dom dump"](https://nchilla.github.io/tractatus-tree/dom)
+* [tabs](https://nchilla.github.io/tractatus-tree/tabs)
+
+
 ## The idea
 Reading through the Tractatus Logico-Philosophicus by Ludwig Wittgenstein in print, I was puzzled by the lack of visual hierarchy for the branches of propositions.
 
