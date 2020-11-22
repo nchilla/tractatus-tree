@@ -2,9 +2,9 @@
 
 ## Iteration directory:
 
-["dom dump"](https://nchilla.github.io/tractatus-tree/dom)
+### [DOM Dump](https://nchilla.github.io/tractatus-tree/dom)
 
-[tabs](https://nchilla.github.io/tractatus-tree/tabs)
+### [Tabs](https://nchilla.github.io/tractatus-tree/tabs)
 
 
 ## The idea
