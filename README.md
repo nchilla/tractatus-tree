@@ -31,11 +31,13 @@ You can see my first test, an indented DOM-dump, [here](https://nchilla.github.i
 
 ### In Progress/to-do:
 * For "tabs" iteration:
-  - [ ] tab markers
-  - [ ] mobile view
+  - [X] tab markers
+  - [x] preface access
   - [x] header bar
   - [x] better indicator for when a prop has children
+  - [ ] mobile navigation
   - [ ] way to search for props, and URL queries
+  - [ ] some information about the project and translation in header
 * Find sections missing from the scrape and add them to the JSON. So far I've noticed problems with:
   * missing content:
     * 5.101

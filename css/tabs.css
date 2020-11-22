@@ -3,12 +3,15 @@
 
 :root{
   --gray:rgba(0, 0, 0,0.05);
+  --maxwidth:720px;
+  --paperpad:40px;
+  --grn:61, 234, 90;
 }
 
 /* typography----------- */
 body{
   font-size:25px;
-  line-height: 30px;
+  line-height: 32px;
 }
 
 /* .sheet{
@@ -24,9 +27,9 @@ body{
   font-style: normal;
 }
 .open-children{
-  color: #3DEA5A;
+  color: rgba(var(--grn),1);
   /* border-bottom:1px solid #3DEA5A; */
-  margin-left: 5px;
+  /* margin-left: 5px; */
   cursor:pointer;
 }
 
@@ -136,8 +139,9 @@ sup{
 }
 
 #header-bar.minimized{
-  top:10px;
-  left:30px;
+  top:20px;
+  left:40px;
+  /* right:10px; */
   transform:translate(0%,0%);
   display:flex;
   flex-flow: row nowrap;
@@ -194,13 +198,14 @@ sup{
   flex:1;
   box-shadow: 5px 0px 23px 0px rgba(0, 0, 0, 0.15);
   /* display:none; */
-  padding:40px;
-  padding-top:100px;
+  padding:var(--paperpad);
+  padding-top:120px;
   padding-bottom:20px;
   box-sizing: border-box;
   overflow:scroll;
-  max-width: 720px;
+  max-width: var(--maxwidth);
   transition:max-width 0.5s;
+  position:relative;
 }
 
 .prev{
@@ -226,9 +231,48 @@ sup{
 
 #d0{
   display:none;
+  max-width:0px;
+  padding-right: 0px;
+  padding-left:0px;
+}
+#d0.visible{
+  display:block;
+}
+#d0.expand{
+  padding-right: var(--paperpad);
+  padding-left:var(--paperpad);
+  max-width:var(--maxwidth);
 }
 
+.tab{
+  position:absolute;
+  right:0;
+  top:0;
+  transform:rotate(-90deg);
+  transform-origin: bottom right;
+  height:40px;
+  /* box-shadow: 5px 5px 24px 0px rgba(0, 0, 0, 0.1); */
+  background-color: rgba(0,0,0,0.1);
+  display:inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px 15px 0px 0px;
+  padding-right:10px;
+  padding-left:10px;
+  opacity:0;
+  transition:opacity 0.3s;
+  transition-delay: 0.5s;
+}
+.prev .tab{
+  opacity:1;
+}
+
+
 /* sheet elements --------- */
+
+#p0 p{
+  display:inline;
+}
 
 ::-webkit-scrollbar {
   display: none;
@@ -263,6 +307,9 @@ sup{
     transform:translate(0%,-50%);
     /* padding-bottom:40px; */
   }
+  #header-bar.minimized{
+    width:auto;
+  }
   #window-minmax{
     left:calc(50% - 20px);
     top:auto;
@@ -271,6 +318,9 @@ sup{
 }
 
 @media(max-width:600px){
+  :root{
+    --paperpad:20px;
+  }
   body{
     font-size:18px;
     line-height: 25px;
@@ -278,11 +328,13 @@ sup{
   #title{
     width: 90vw;
   }
-  .sheet{
-    padding:20px;
-  }
   .prop{
     min-width:300px;
+  }
+  .prev{
+    padding-left: 0px;
+    padding-right:0px;
+    max-width: 0px;
   }
 
 }
@@ -329,8 +381,12 @@ td.summationmiddle {
 span.largeop {
     font-size: 200%;
 }
-
+var{
+  padding-right: 2px;
+}
 .mathrel,.mathop{
+  /* margin-left: 3px;
+  margin-right: 3px; */
   padding-bottom: 4px;
   display: inline-block;
 }
