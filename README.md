@@ -65,6 +65,8 @@ Here are my ideas so far. See [predecessors](#user-content-ways-other-people-hav
 
 * **Interactive graphics** for specific propositions or sets of propositions, possibly utilizing the graphics in the book.
 
+* **A sidebar outline** for navigation, using a similar visual logic to [this tree structure](http://tractatus.lib.uiowa.edu/map/)
+
 
 ## Typography
 
