@@ -99,7 +99,15 @@ function handlePreface(){
   })
 }
 
-
+function parseKey(keystring){
+  var keyArray=keystring.split('.');
+  var keyDisplay=[...keyArray];
+  keyDisplay[0]=keyDisplay[0]+'.';
+  keyDisplay=keyDisplay.join('');
+  var keyClass=keyArray.join('-');
+  var keyParent=keyArray.slice(0,keyArray.length-1).join('-');
+  return {array:keyArray,display:keyDisplay,dom:keyClass,parent:keyParent}
+}
 
 
 function toggleWin(){
