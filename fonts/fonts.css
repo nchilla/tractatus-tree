@@ -1,0 +1,17 @@
+/* font links -------*/
+
+@font-face {
+   font-family: 'Signifier';
+   src: url('../fonts/s28pi87j9ddm2wdobq6q.woff2') format('woff2'),
+        url('../fonts/s28pi87j9ddm2wdobq6q.woff') format('woff');
+   font-weight: 300;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Signifier';
+   src: url('../fonts/6xwydy86waq5vc3yrupu.woff2') format('woff2'),
+        url('../fonts/6xwydy86waq5vc3yrupu.woff') format('woff');
+   font-weight: 300;
+   font-style: italic;
+}
