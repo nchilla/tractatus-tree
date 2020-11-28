@@ -3,6 +3,7 @@
 ## Directory:
 
 **Iteration links:**
+
 [Context map
 ![context map](assets/context-map.png)](https://nchilla.github.io/tractatus-tree/context-map)
 
