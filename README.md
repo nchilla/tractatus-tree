@@ -3,9 +3,19 @@
 ## Directory:
 
 **Iteration links:**
-* [DOM Dump](https://nchilla.github.io/tractatus-tree/dom)
-* [Tabs](https://nchilla.github.io/tractatus-tree/tabs)
-* [Context map](https://nchilla.github.io/tractatus-tree/context-map)
+[Context map
+![context map](assets/context-map.png)](https://nchilla.github.io/tractatus-tree/context-map)
+
+[Tabs
+![tabs](assets/tabs.png)
+](https://nchilla.github.io/tractatus-tree/tabs)
+
+[DOM Dump
+![DOM dump](assets/dom-dump.png)
+](https://nchilla.github.io/tractatus-tree/dom)
+
+
+
 
 **Contents:**
 1. [The idea](#the-idea)
