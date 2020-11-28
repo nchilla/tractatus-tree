@@ -383,6 +383,7 @@ span.largeop {
 }
 var{
   padding-right: 2px;
+  font-style: italic;
 }
 .mathrel,.mathop{
   /* margin-left: 3px;
