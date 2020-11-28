@@ -91,7 +91,7 @@ function draw(endNode){
         .attr('x1',domX)
         .attr('x2',domX)
         .attr('y1',incr*x)
-        .attr('y2',incr*x);
+        .attr('y2',incr*x+0.1);
       }
     }
 
