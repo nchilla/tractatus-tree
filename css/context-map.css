@@ -1,0 +1,282 @@
+:root{
+  --d-stroke:1px;
+  --gray:#A0A0A0;
+  --math:rgba(0, 0, 0,0.05);
+  --diameter:11px;
+  --green:#BDFFBA;
+}
+
+
+
+/* typography --------------*/
+p{
+  margin-bottom:10px;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+em{
+  font-style: italic;
+}
+sup{
+  vertical-align: super;
+  font-size: smaller;
+}
+.key,.math,.open-children{
+  font-family: aktiv-grotesk,sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.math{
+  background-color: var(--math);
+  padding:3px;
+  border-radius: 5px;
+}
+
+table{
+  background-color: var(--math);
+  padding:3px;
+  border-radius: 5px;
+  font-family: aktiv-grotesk,sans-serif;
+  font-weight: 300;
+}
+.math>.math{
+  background-color:rgba(0,0,0,0);
+  padding:0px;
+  border-radius: 0px;
+}
+
+.empty{
+  display:none;
+}
+
+
+#pagewrap{
+  position:relative;
+  display:flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+#map-wrapper{
+  position:sticky;
+  top:0;
+  left:0;
+  flex:3;
+  height:100vh;
+  padding:40px;
+  padding-right:0px;
+  box-sizing: border-box;
+}
+#text{
+  margin-left:100px;
+  padding:60px;
+  flex:7;
+  /* padding-right:60px; */
+  /* min-width:400px;
+  max-width:min(60%,700px); */
+
+  font-family: "Signifier Test",aktiv-grotesk,sans-serif;
+  font-weight: 300;
+  font-size:22px;
+  line-height: 30px;
+}
+#text>div:first-of-type{
+  margin-top:50%;
+}
+.prop{
+  margin-bottom: 30px;
+  position:relative;
+}
+.orb{
+  opacity:0;
+  transition:opacity 0.3s;
+  width:20px;
+  height:20px;
+  top: 6px;
+  left: -5px;
+  border-radius: 50%;
+  background-color: var(--green);
+  transform:translateX(-100%);
+  position:absolute;
+}
+.select .orb{
+  opacity:1;
+}
+
+
+#map{
+  width:100%;
+  height:100%;
+  position:relative;
+}
+#map svg,#nodes{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  overflow: visible;
+}
+#nodes{
+  pointer-events: none;
+  /* left:-1px; */
+}
+.node{
+  position:absolute;
+  display:inline;
+  width:var(--diameter);
+  height:var(--diameter);
+  box-sizing: border-box;
+  transform: translate(-50%,-50%);
+  pointer-events: all;
+  overflow:visible;
+  cursor:pointer;
+}
+
+.node .circle{
+  top:0;
+  left:0;
+  width:var(--diameter);
+  height:var(--diameter);
+  border-radius: 50%;
+  background-color: white;
+  border:var(--d-stroke) solid var(--gray);
+}
+
+.node.focus .circle{
+  border:var(--d-stroke) solid black;
+}
+.node.parent .circle{
+  background-color: var(--gray);
+}
+.node.parent.focus .circle{
+  background-color:black;
+}
+
+.node span,.node div{
+  box-sizing: border-box;
+  z-index:5;
+  position: absolute;
+}
+.node .highlight{
+  z-index:1;
+  top:0;
+  left:0;
+  width:var(--diameter);
+  height:var(--diameter);
+  border-radius: 50%;
+  transform:scale(1);
+  background-color: var(--green);
+}
+svg #highlight{
+  opacity:1;
+  stroke:#BDFFBA;
+  stroke-width:30px;
+  stroke-linecap:round;
+}
+
+
+/* .end-node .highlight{
+  transform:scale(3.5);
+} */
+
+
+.node span{
+  opacity:0;
+  font-family: aktiv-grotesk,sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size:15px;
+  left: 20px;
+  top:0;
+}
+
+
+.focus span{
+  opacity:1;
+}
+
+
+
+line{
+  stroke:var(--gray);
+  stroke-width:var(--d-stroke);
+  opacity:0;
+  transition: opacity 0.3s;
+}
+line.focus{
+  stroke:black;
+}
+
+
+
+polygon{
+  fill:rgba(0,0,0,0.03);
+  stroke:rgba(0,0,0,0.1);;
+  stroke-width:var(--d-stroke);
+  /* stroke-linejoin:round; */
+}
+
+
+/* inherited --------*/
+
+.possibilities{
+  display: inline-table;
+  vertical-align: middle;
+  border-collapse: collapse;
+  border: none;
+  margin: 0px;
+  padding: 0px;
+  text-indent: 0px;
+}
+td.summationtop {
+    text-align: center;
+    vertical-align: bottom;
+    padding-bottom: 0px;
+}
+td.middleleft{
+    vertical-align: middle;
+}
+td.middleright {
+    vertical-align: middle;
+    text-align: right;
+}
+span.largeparen {
+    font-size: 250%;
+    vertical-align: middle;
+}
+td.middlecenter {
+    vertical-align: middle;
+    text-align: center;
+}
+td.summationmiddle {
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.smallvar {
+    font-size: 80%;
+}
+span.largeop {
+    font-size: 200%;
+}
+var{
+  padding-right: 2px;
+}
+.mathrel,.mathop{
+  /* margin-left: 3px;
+  margin-right: 3px; */
+  padding-bottom: 4px;
+  display: inline-block;
+}
+.centered{
+  text-align: center;
+}
+.sfmiddle{
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

@@ -4,14 +4,6 @@ var tractatus;
 function setUp(json){
   tractatus=d3.hierarchy(json);
   console.log(tractatus);
-  // var trunk=tractatus.children;
-  // var d1=d3.select('#d1');
-  // for(var i=1;i<trunk.length;i++){
-  //   var item=trunk[i].data;
-  //   var key=parseKey(item.key);
-  //   d1.append('div').attr('class','prop').attr('id','p'+key.dom).html(item.content.en);
-  //   d3.select('#p'+key.dom).insert('span',':first-child').attr('class','key').html(key.display);
-  // }
   populate(tractatus,0);
   d3.selectAll('.sheet').on('click',function(){
 
@@ -21,7 +13,6 @@ function setUp(json){
     }
   })
   d3.select('#window-minmax').on('click',toggleWin);
-  // $('#header-bar').draggable();
 }
 
 function populate(parent,startInd){
@@ -35,10 +26,7 @@ function populate(parent,startInd){
     tab.select('span').html(parentKey.display);
     var intProg=parseInt(parentKey.array[parentKey.array.length-1]);
     var progress=Math.round((intProg>0?intProg:1)/tab.datum().childcount*80);
-    // tab.style('top',`calc(${progress}% - 100px)`)
     tab.style('top',`${progress}vh`)
-    console.log(tab.node());
-    // console.log(parentKey.array[parentKey.array.length-1],tab.datum().childcount,progress);
   }
   layer.selectAll('.prop').remove();
   for(var i=startInd;i<trunk.length;i++){
@@ -108,31 +96,11 @@ function handlePreface(){
   depth0.select('.open-children').on('click',function(){
     d3.select('#d0').classed('expand',false);
     populate(tractatus,0);
-    // setTimeout(function () {
-    //   populate(tractatus,0);
-    // }, 400);
   })
 }
 
 
-function parseKey(key){
-  var keyArray=key.split('.');
-  var keyDisplay=keyArray[0]+'.';
-  // if(keyArray.length>1){
-  //   var keyDisplay=keyArray[0]+'.';
-  // }else{
-  //   var keyDisplay=keyArray[0];
-  // }
 
-  for(var i=1;i<keyArray.length;i++){
-    keyDisplay=keyDisplay+keyArray[i];
-  }
-  var keyClass=keyArray.join('-');
-  var keyParent=keyArray.slice(0,keyArray.length-1).join('-');
-
-  return {array:keyArray,display:keyDisplay,dom:keyClass,parent:keyParent}
-
-}
 
 function toggleWin(){
   var header=d3.select('#header-bar');

@@ -5,6 +5,7 @@
 **Iteration links:**
 * [DOM Dump](https://nchilla.github.io/tractatus-tree/dom)
 * [Tabs](https://nchilla.github.io/tractatus-tree/tabs)
+* [Context map](https://nchilla.github.io/tractatus-tree/context-map)
 
 **Contents:**
 1. [The idea](#the-idea)
@@ -36,15 +37,27 @@ You can see my first test, an indented DOM-dump, [here](https://nchilla.github.i
 
 
 ### In Progress/to-do:
-* For "tabs" iteration:
-  - [X] tab markers
-  - [x] preface access
-  - [x] header bar
-  - [x] better indicator for when a prop has children
-  - [ ] mobile navigation
-  - [ ] way to search for props, and URL queries
-  - [ ] some information about the project and translation in header
-* Find sections missing from the scrape and add them to the JSON. So far I've noticed problems with:
+For **Tabs** iteration:
+- [X] tab markers
+- [x] preface access
+- [x] header bar
+- [x] better indicator for when a prop has children
+- [ ] mobile navigation
+- [ ] way to search for props, and URL queries
+- [ ] some information about the project and translation in header
+
+For **Context Map** iteration:
+- [X] A flexible width dendrogram showing you only the nodes and depths that are relevant to the context of the proposition you are reading
+- [X] The map redraws itself according to which proposition is focused on screen, using Russell Goldenberg's [Scrollama](https://github.com/russellgoldenberg/scrollama/)
+- [ ] Interactivity for map
+  - [ ] Clicking on a prop's circle should scroll you to its place in the text and redraw the map
+  - [ ] when you hover over a prop, it will expand a horizontal menu showing its children
+- [ ] mobile navigation
+- [ ] some information about the project and translation in header
+
+
+General:
+- [ ] Find sections missing from the scrape and add them to the JSON. So far I've noticed problems with:
   * missing content:
     * 5.101
   * redraw graphic:
@@ -57,21 +70,24 @@ You can see my first test, an indented DOM-dump, [here](https://nchilla.github.i
 
 Here are my ideas so far. See [predecessors](#user-content-ways-other-people-have-tried-this) for context.
 
-* **A collapsible version** like [this](http://daxoliver.com/tractatus/) but with better typesetting and interactive features.
+* A collapsible version like [this](http://daxoliver.com/tractatus/) but with better typesetting and interactive features.
   * When only the main 1-7 propositions are open, the scale of the type goes up to fill the screen.
   * Could be understood as an accordion "nav menu" but not necessarily made to look that way graphically
 
-* **A "draggable" canvas tree map** such as what both Juliette and Alex suggested for my idea last week.
+* A "draggable" canvas tree map such as what both Juliette and Alex suggested for my idea last week.
 
-* **A line hierarchy structure** similar to Tumblr/Reddit's form of organizing comment threads.
+* A line hierarchy structure similar to Tumblr/Reddit's form of organizing comment threads.
   * I imagine this may work well for print because it's highly compact.
 
-* A version **visualization of the number of words/characters/sub-propositions** in props 1-7 through their scale/proportion.
+* A visualization of the number of words/characters/sub-propositions in props 1-7 through their scale/proportion.
   * I'm thinking of concentric circle groupings, like the ones people make in Prezi.
 
-* **Interactive graphics** for specific propositions or sets of propositions, possibly utilizing the graphics in the book.
+* Interactive graphics for specific propositions or sets of propositions, possibly utilizing the graphics in the book.
 
-* **A sidebar outline** for navigation, using a similar visual logic to [this tree structure](http://tractatus.lib.uiowa.edu/map/)
+* A sidebar outline for navigation, using a similar visual logic to [this tree structure](http://tractatus.lib.uiowa.edu/map/)
+  * it could respond and potentially animate as the page scrolls
+
+* Something using progress bars
 
 
 ## Typography

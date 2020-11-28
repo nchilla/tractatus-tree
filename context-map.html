@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" >
+    <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1">
+    <title>Another Tractatus Tree</title>
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="css/clearstyle.css">
+    <link rel="stylesheet" href="css/context-map.css">
+    <!-- fonts -->
+    <link rel="stylesheet" href="fonts/signifier.css">
+    <link rel="stylesheet" href="https://use.typekit.net/wlv7asz.css">
+  </head>
+  <body>
+    <div id="pagewrap">
+      <div id="map-wrapper">
+        <div id="map">
+          <svg preserveAspectRatio="none" viewBox="0 0 100 100" >
+              <line id='highlight' vector-effect='non-scaling-stroke' x1="-100" x2="-100" y1="-100" y2="-100"/>
+              <line id='depth1' class='depth' vector-effect='non-scaling-stroke' x1="0" x2="0" y1="0" y2="100"  />
+              <line id='depth2' class='depth' vector-effect='non-scaling-stroke' x1="10" x2="10" y1="0" y2="100"  />
+              <line id='depth3' class='depth' vector-effect='non-scaling-stroke' x1="20" x2="20" y1="0" y2="100"  />
+              <line id='depth4' class='depth' vector-effect='non-scaling-stroke' x1="30" x2="30" y1="0" y2="100"  />
+              <line id='depth5' class='depth' vector-effect='non-scaling-stroke' x1="40" x2="40" y1="0" y2="100"  />
+              <line id='depth6' class='depth' vector-effect='non-scaling-stroke' x1="50" x2="50" y1="0" y2="100"  />
+          </svg>
+          <div id="nodes"></div>
+        </div>
+      </div>
+      <div id="text">
+
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/intersection-observer"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script>
+      fetch("data/tractatus.json")
+        .then(function(tractatus){ return tractatus.json(); })
+        .then(function(json){ setUp(json)});
+    </script>
+    <script src="js/context-map.js" charset="utf-8"></script>
+  </body>
+</html>
