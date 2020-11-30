@@ -15,3 +15,10 @@
    font-weight: 300;
    font-style: italic;
 }
+
+@font-face{
+  font-family:'Panama';
+  src:url('../fonts/wprgfcvgozdy7vna7zm3.woff');
+  font-weight:400;
+  font-style:normal;
+}
