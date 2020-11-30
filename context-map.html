@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/wlv7asz.css">
   </head>
   <body>
+    <div id="nav"></div>
     <div id="pagewrap">
       <div id="map-wrapper">
         <div id="map">
@@ -35,6 +36,7 @@
     <script src="https://unpkg.com/intersection-observer"></script>
     <script src="https://unpkg.com/scrollama"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
+      <script src="js/smoothscroll.min.js"></script>
     <script>
       fetch("data/tractatus.json")
         .then(function(tractatus){ return tractatus.json(); })

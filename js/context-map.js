@@ -1,6 +1,7 @@
 // universal variables-------------------------
 
-
+// timing
+var pause={status:false,target:null};
 
 
 // data related
@@ -26,11 +27,11 @@ function setUp(json){
   data.children.splice(0,1);
   tractatus=d3.hierarchy(data);
   console.log(preface,tractatus);
-  var testKey1=tractatus.children[2].children[1].children[0].data.key;
-  var testKey2='6.4.3.2.1';
-  var testKey3=tractatus.children[5].children[3].children[3].children[2];
-  var testKey4=tractatus.children[2];
-  draw(testKey3);
+
+  var startKey=tractatus.children[0];
+  draw(startKey);
+  d3.select('#text').append('div').attr('id','preface')
+  d3.select('#preface').html(preface.content.en).insert('span',':first-child').attr('class','key').html('Preface');
   buildText(tractatus);
   observing();
 }
@@ -83,7 +84,17 @@ function draw(endNode){
       domEl.append('div').attr('class','highlight')
 
       domEl.on('click',function(){
-        draw(d3.select(this).datum());
+        var item=d3.select(this).datum();
+        draw(item);
+        var textTarget=d3.selectAll('.prop').filter((d,i)=>d.data.key==item.data.key);
+        if(textTarget.classed('empty')){
+          textTarget=d3.select(`#${textTarget.attr('id')} ~ div:not(.empty)`);
+        }
+
+        var scrollOpt={behavior:'smooth',block:'center'};
+        pause.status=true;
+        pause.target=textTarget;
+        document.querySelector('#'+textTarget.attr('id')).scrollIntoView(scrollOpt);
       })
 
       if(elKey.dom==key.dom){
@@ -129,10 +140,14 @@ function observing(){
     })
     .onStepEnter((response) => {
       var el=d3.select(response.element);
-      d3.selectAll('.select').classed('select',false);
-      el.classed('select',true);
-      var datum=el.datum();
-      draw(datum);
+      if(pause.status==true&&pause.target.datum().data.key!==el.datum().data.key){
+      }else{
+        d3.selectAll('.select').classed('select',false);
+        el.classed('select',true);
+        var datum=el.datum();
+        draw(datum);
+        pause.status=false;
+      }
     })
   window.addEventListener("resize", scroller.resize);
 }

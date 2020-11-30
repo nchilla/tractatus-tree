@@ -12,7 +12,7 @@ function setUp(json){
       resetFocus(ind);
     }
   })
-  d3.select('#window-minmax').on('click',toggleWin);
+  // d3.select('#window-minmax').on('click',toggleWin);
 }
 
 function populate(parent,startInd){

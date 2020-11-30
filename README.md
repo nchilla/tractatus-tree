@@ -60,10 +60,9 @@ For **Tabs** iteration:
 For **Context Map** iteration:
 - [X] A flexible width dendrogram showing you only the nodes and depths that are relevant to the context of the proposition you are reading
 - [X] The map redraws itself according to which proposition is focused on screen, using Russell Goldenberg's [Scrollama](https://github.com/russellgoldenberg/scrollama/)
-- [ ] Add Preface to text and visualize it somewhere.
-- [ ] Interactivity for map
-  - [ ] Clicking on a prop's circle should scroll you to its place in the text and redraw the map
-  - [ ] when you hover over a prop, it will expand a horizontal menu showing its children
+- [X] Add Preface to text and visualize it somewhere.
+- [X] Clicking on a prop's circle should scroll you to its place in the text and redraw the map
+- [ ] when you hover over a prop, it will expand a horizontal menu showing its children
 - [ ] mobile navigation
 - [ ] some information about the project and translation in header
 

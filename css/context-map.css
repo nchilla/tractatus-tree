@@ -49,39 +49,58 @@ table{
   display:none;
 }
 
+#nav{
+  position:fixed;
+  z-index:2;
+  background-color:var(--math);
+  height:100vh;
+  width:100%;
+}
 
 #pagewrap{
   position:relative;
+  z-index:5;
+  top:50vh;
+  border-top:1px solid var(--gray);
   display:flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  background-color:white;
 }
 
 #map-wrapper{
   position:sticky;
   top:0;
   left:0;
-  flex:3;
+  flex:4;
+  min-width:300px;
   height:100vh;
   padding:40px;
-  padding-right:0px;
+  padding-right:60px;
   box-sizing: border-box;
+  box-shadow: 5px 15px 23px 0px rgba(0, 0, 0, 0.15);
 }
-#text{
-  margin-left:100px;
-  padding:60px;
-  flex:7;
-  /* padding-right:60px; */
-  /* min-width:400px;
-  max-width:min(60%,700px); */
 
+#text{
+  padding:60px;
+  margin-left:20px;
+  flex:7;
+  min-width:400px;
+  max-width:750px;
+  box-sizing: border-box;
   font-family: "Signifier",aktiv-grotesk,sans-serif;
   font-weight: 300;
   font-size:22px;
   line-height: 30px;
 }
-#text>div:first-of-type{
+/* #text>div:first-of-type{
   margin-top:50%;
+} */
+#preface{
+  position:relative;
+  margin-bottom:100px;
+  padding-bottom:10px;
+  border-bottom: 1px dashed black;
 }
 .prop{
   margin-bottom: 30px;
@@ -124,8 +143,10 @@ table{
 .node{
   position:absolute;
   display:inline;
-  width:var(--diameter);
-  height:var(--diameter);
+  width:calc(var(--diameter)*2);
+  height:calc(var(--diameter)*2);
+  transition: background-color 0.3s;
+  border-radius: 50%;
   box-sizing: border-box;
   transform: translate(-50%,-50%);
   pointer-events: all;
@@ -134,8 +155,9 @@ table{
 }
 
 .node .circle{
-  top:0;
-  left:0;
+  top:calc(var(--diameter));
+  left: calc(var(--diameter));
+  transform:translate(-50%,-50%);
   width:var(--diameter);
   height:var(--diameter);
   border-radius: 50%;
@@ -158,16 +180,7 @@ table{
   z-index:5;
   position: absolute;
 }
-.node .highlight{
-  z-index:1;
-  top:0;
-  left:0;
-  width:var(--diameter);
-  height:var(--diameter);
-  border-radius: 50%;
-  transform:scale(1);
-  background-color: var(--green);
-}
+
 svg #highlight{
   opacity:1;
   stroke:#BDFFBA;
@@ -188,7 +201,7 @@ svg #highlight{
   font-style: normal;
   font-size:15px;
   left: 20px;
-  top:0;
+  top:3px;
 }
 
 
@@ -215,6 +228,13 @@ polygon{
   stroke:rgba(0,0,0,0.1);;
   stroke-width:var(--d-stroke);
   /* stroke-linejoin:round; */
+}
+
+
+@media(hover:hover){
+  .node:hover{
+    background-color: rgba(0,0,0,0.06);
+  }
 }
 
 
