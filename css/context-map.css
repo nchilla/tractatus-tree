@@ -31,20 +31,32 @@ sup{
 .math{
   background-color: var(--math);
   padding:3px;
+  padding-left: 6px;
+  padding-right: 6px;
   border-radius: 5px;
 }
 
 table{
   background-color: var(--math);
-  padding:3px;
   border-radius: 5px;
   font-family: aktiv-grotesk,sans-serif;
   font-weight: 300;
+}
+
+table tbody{
+  border: 5px solid transparent;
 }
 .math>.math{
   background-color:rgba(0,0,0,0);
   padding:0px;
   border-radius: 0px;
+}
+
+#i6-1-2-0-3 svg{
+  width:80%;
+  margin-left:10%;
+  padding-top:20px;
+  padding-bottom:20px;
 }
 
 .empty{
@@ -250,6 +262,30 @@ polygon{
 
 
 /* inherited --------*/
+.truthtable:first-child{
+  margin-left:0px;
+}
+
+.truthtable{
+  display:inline-block;
+  margin-left: 30px;
+}
+
+.truthtable td,th{
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top:3px;
+  padding-bottom: 3px;
+  border-right: 1px solid black;
+}
+
+.truthtable th{
+  font-style:italic;
+}
+
+.truthtable tr{
+  border-top:1px solid black;
+}
 
 .possibilities{
   display: inline-table;

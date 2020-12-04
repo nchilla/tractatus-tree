@@ -7,6 +7,7 @@ var pause={status:false,target:null};
 // data related
 var tractatus;
 var preface;
+var lang='en';
 
 // dom selectors
 var svg=d3.select('#map').select('svg');
@@ -31,7 +32,7 @@ function setUp(json){
   var startKey=tractatus.children[0];
   draw(startKey);
   d3.select('#text').append('div').attr('id','preface')
-  d3.select('#preface').html(preface.content.en).insert('span',':first-child').attr('class','key').html('Preface');
+  d3.select('#preface').html(preface.content[lang]).insert('span',':first-child').attr('class','key').html('Preface');
   buildText(tractatus);
   observing();
 }
@@ -118,6 +119,7 @@ function draw(endNode){
 
 
 }
+
 function buildText(object){
   object.children.forEach((item, i) => {
     var key=parseKey(item.data.key);
@@ -126,7 +128,7 @@ function buildText(object){
       .datum(item)
       .attr('id','i'+key.dom)
       .attr('class',`depth${item.depth} prop ${item.depth>1?'child':''} ${item.data.empty==true?'empty':''}`)
-      .html(`<span class="key">${key.display}</span>`+(item.data.empty==false?item.data.content.en:''))
+      .html(`<span class="key">${key.display}</span>`+(item.data.empty==false?item.data.content[lang]:''))
       .append('div').attr('class','orb');
     if(item.children){buildText(item);};
   });
@@ -151,6 +153,23 @@ function observing(){
     })
   window.addEventListener("resize", scroller.resize);
 }
+
+function changeLang(){
+  if(event.keyCode == 32 && event.target == document.body) {
+    event.preventDefault();
+    lang=(lang=='en')?'de':'en';
+    d3.selectAll('.prop').each(function(){
+      var item=d3.select(this)
+      var propdata=item.datum().data;
+      var key=parseKey(propdata.key);
+      item.html(`<div class="orb"></div><span class="key">${key.display}</span>`+(propdata.empty==false?propdata.content[lang]:''))
+      d3.select('#preface').html(preface.content[lang]).insert('span',':first-child').attr('class','key').html('Preface');
+    })
+  }
+
+}
+
+window.addEventListener('keydown',changeLang)
 
 
 //these are smaller assisting functions used multiple times in the above

@@ -67,7 +67,9 @@ For **Context Map** iteration:
 - [ ] some information about the project and translation in header
 
 
-General:
+Across the board:
+- [ ] Add German support
+- [ ] Finish header and nav
 - [ ] Find sections missing from the scrape and add them to the JSON. So far I've noticed problems with:
   * missing content:
     * 5.101
