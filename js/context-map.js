@@ -1,13 +1,15 @@
 // universal variables-------------------------
 
-// timing
+// timing/scroll distance
 var pause={status:false,target:null};
-
+var expandHead=false;
+var recordDist='80px';
 
 // data related
 var tractatus;
 var preface;
 var lang='en';
+var prefacetitle={en:'Preface',de:'Vorwort'};
 
 // dom selectors
 var svg=d3.select('#map').select('svg');
@@ -16,6 +18,10 @@ var svgLines=[];
 for(var i=1;i<7;i++){
   svgLines.push(d3.select('#depth'+i));
 }
+
+//effects
+var t=d3.transition().duration(600).ease(d3.easeLinear);
+
 
 
 
@@ -32,9 +38,10 @@ function setUp(json){
   var startKey=tractatus.children[0];
   draw(startKey);
   d3.select('#text').append('div').attr('id','preface')
-  d3.select('#preface').html(preface.content[lang]).insert('span',':first-child').attr('class','key').html('Preface');
+  d3.select('#preface').html(preface.content[lang]).insert('span',':first-child').attr('class','key').html(prefacetitle[lang]);
   buildText(tractatus);
   observing();
+  headerStartUp();
 }
 //draws the graph according to a currently focused node
 function draw(endNode){
@@ -154,22 +161,6 @@ function observing(){
   window.addEventListener("resize", scroller.resize);
 }
 
-function changeLang(){
-  if(event.keyCode == 32 && event.target == document.body) {
-    event.preventDefault();
-    lang=(lang=='en')?'de':'en';
-    d3.selectAll('.prop').each(function(){
-      var item=d3.select(this)
-      var propdata=item.datum().data;
-      var key=parseKey(propdata.key);
-      item.html(`<div class="orb"></div><span class="key">${key.display}</span>`+(propdata.empty==false?propdata.content[lang]:''))
-      d3.select('#preface').html(preface.content[lang]).insert('span',':first-child').attr('class','key').html('Preface');
-    })
-  }
-
-}
-
-window.addEventListener('keydown',changeLang)
 
 
 //these are smaller assisting functions used multiple times in the above
@@ -194,3 +185,77 @@ function outerPos(node){
   var index=parent.children.indexOf(node);
   return index;
 }
+
+
+
+//header and settings related
+
+function headerStartUp(){
+  handleHeader();
+  d3.select('#info-button').on('click',function(){
+    if(expandHead==false){
+      expandHead=true;
+      if(window.scrollY==0){expand(expandHead);};
+      window.scrollTo({top: 0,left: 0,behavior: 'smooth'});
+    }else{
+      expandHead=false;
+      expand(expandHead);
+    }
+  });
+  d3.selectAll('.lang-button').on('click',changeLang);
+}
+
+function changeLang(){
+  //toggles language of full text between English and German
+  lang=(lang=='en')?'de':'en';
+  d3.selectAll('.active').classed('active',false);
+  d3.select('#'+lang).classed('active',true);
+  d3.selectAll('.prop').each(function(){
+    var item=d3.select(this)
+    var propdata=item.datum().data;
+    var key=parseKey(propdata.key);
+    item.html(`<div class="orb"></div><span class="key">${key.display}</span>`+(propdata.empty==false?propdata.content[lang]:''));
+  })
+  d3.select('#preface').html(preface.content[lang]).insert('span',':first-child').attr('class','key').html(prefacetitle[lang]);
+}
+
+function changeLangKey(){
+  if(event.keyCode == 32 && event.target == document.body) {
+    event.preventDefault();
+    changeLang();
+  }
+}
+
+function handleHeader(){
+  var dist=window.scrollY;
+  var nav=d3.select('#nav')
+  var navheight=parseInt(nav.style('height').replace('px',''));
+  if(expandHead==false){
+    if(dist<81){
+      d3.select('#nav').style('height',`${80-dist}px`);
+    }else if(navheight>0){
+      d3.select('#nav').style('height',`0px`);
+    }
+  }else{
+    if(dist==0){
+      expand(true);
+    }
+    recordDist=((80-dist)>0)?`${80-dist}px`:0;
+  }
+}
+
+function expand(val){
+  var nav=d3.select('#nav');
+  if(val){nav.classed('expanded',val);};
+  nav.style('height',val?'100vh':recordDist);
+  d3.select('#pagewrap').style('top',val?'100vh':'79px');
+  d3.select('#info-button').html(`<span>${val?'X':'i'}</span>`);
+  if(!val){
+    d3.select('#info').node().scrollTo({top: 0,left: 0,behavior: 'smooth'});
+    setTimeout(function () {nav.classed('expanded',val);}, 600);
+  };
+}
+
+window.addEventListener('keydown',changeLangKey)
+
+window.addEventListener('scroll',handleHeader);

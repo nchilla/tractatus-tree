@@ -13,7 +13,24 @@
   </head>
   <body>
     <div id="nav">
-      <h1>Another Tractatus Tree</h1>
+      <div id="info-button" class='noselect'><span>i</span></div>
+      <div id="info">
+        <h1>Tractatus Logico Philosophicus</h1>
+        <h2>About</h2>
+        <h3>Ludwig Wittgenstein’s <em>Tractatus Logico-Philosophicus</em> is a landmark philosophical text composed of propositions arranged in a hierarchical structure (e.g. 2, 2.1, 2.1.1, etc). This project aims to explore different methods of presenting and visualizing the <em>Tractatus</em>, with more or less practical utility. I am not the first to have this idea; you can find a collection of predecessors to my project <a href="https://www.are.na/nico-chilla/tractatus-visualizations" target="_blank">here.</a></h3>
+        <h2>Publishing information</h2>
+        <h3>This project can be viewed in either the Pears/McGuinness English translation or the original German. It uses a JSON version of the text scraped by <a href="https://pbellon.github.io/#!/en" target="_blank">Pierre Bellon</a> from <a href="https://people.umass.edu/klement/tlp/tlp.html" target="_blank">Kevin C. Klement’s page</a> and adjusted/cleaned by me. The <em>Tractatus</em> is in the public domain.</h3>
+        <h2>Development</h2>
+        <h3>You can browse the GitHub repo for this project <a href="https://github.com/nchilla/tractatus-tree" target="_blank">here</a>, and if you notice any discrepancies with the text please feel free to submit an issue. </h3>
+        <h2>Colophon</h2>
+        <h3>Body text is set in <a href="https://klim.co.nz/retail-fonts/signifier/" target="_blank">Signifier</a> by Kris Sowersby; Numbering and logic statements are set in <a href="https://fonts.adobe.com/fonts/aktiv-grotesk" target="_blank">Aktiv Grotesk</a> by Dalton Maag; Header is set in <a href="https://typefaces.temporarystate.net/preview/Panama" target="_blank">Panama</a> by Roman Gornitsky.</h3>
+      </div>
+      <div id="settings">
+        <div id="lang-change">
+          <span class="lang-button active" id="en">en</span> | <span id="de" class="lang-button">de</span>
+        </div>
+        <svg id="gear" width="26.5" height="26.5"><use href="tractatus-files/gear.svg#thegear"></svg>
+      </div>
     </div>
     <div id="pagewrap">
       <div id="map-wrapper">
