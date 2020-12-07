@@ -1,21 +1,32 @@
 var tractatus;
-
+var expandHead=false;
+var recordDist='80px';
+var lang='en';
+var prefacetitle={en:'Preface',de:'Vorwort'};
+var atm;
+var indrecord=1;
 
 function setUp(json){
   tractatus=d3.hierarchy(json);
   console.log(tractatus);
-  populate(tractatus,0);
+  atm=tractatus;
+  populate(tractatus,0,true);
   d3.selectAll('.sheet').on('click',function(){
-
     if(event.srcElement==this){
       var ind=d3.select(this).attr('id').split('')[1];
+      ind=parseInt(ind);
+      for(var i=0; i<indrecord-ind;i++){
+        atm=atm.parent;
+      }
+      indrecord=ind;
       resetFocus(ind);
     }
   })
+  headerStartUp();
   // d3.select('#window-minmax').on('click',toggleWin);
 }
 
-function populate(parent,startInd){
+function populate(parent,startInd,present){
   var trunk=parent.children;
   var depth=parent.depth+1;
   var layer=d3.select('#d'+depth);
@@ -40,15 +51,18 @@ function populate(parent,startInd){
       .append('div')
       .attr('class','prop')
       .attr('id','p'+key.dom)
-      .html('<span class="open-children">←</span><p>Preface</p>')
+      .html(`<span class="open-children">←</span><p>${prefacetitle[lang]}</p>`)
     }else{
-      layer.append('div').attr('class',domClass).datum(trunk[i]).attr('id','p'+key.dom).html(item.content.en);
+      layer.append('div').attr('class',domClass).datum(trunk[i]).attr('id','p'+key.dom).html(item.content[lang]);
       d3.select('#p'+key.dom).insert('span',':first-child').attr('class','key').html(key.display);
       if(isParent){
         var lastChild=d3.select('#p'+key.dom).node().lastChild;
         d3.select(lastChild).append('span').attr('class','open-children').html(` [${trunk[i].children.length}]→`);
       }
-      resetFocus(depth);
+      if(present==true){
+        indrecord=depth;
+        resetFocus(depth);
+      }
     }
   }
   layer.select('.tab').datum({childcount:(depth>1?trunk.length:trunk.length-1)});
@@ -68,10 +82,10 @@ function resetFocus(crosshair){
 
 function open(){
   var prop=this.parentNode.parentNode;
-
+  atm=d3.select(prop).datum();
 
   if(d3.select(prop).classed('prop')){
-    populate(d3.select(prop).datum(),0);
+    populate(d3.select(prop).datum(),0,true);
   }else{
     handlePreface();
   }
@@ -85,17 +99,18 @@ function handlePreface(){
   .html('<p>Propositions<span class="open-children"> →</span> </p>')
 
   depth0.append('div').attr('class','prop')
-  .html(tractatus.children[0].data.content.en)
-  .insert('span',':first-child').attr('class','key').html('Preface');
+  .html(tractatus.children[0].data.content[lang])
+  .insert('span',':first-child').attr('class','key').html(prefacetitle[lang]);
+  indrecord=0;
   resetFocus(0);
-
   setTimeout(function () {
     depth0.classed('expand',true);
   }, 10);
 
   depth0.select('.open-children').on('click',function(){
     d3.select('#d0').classed('expand',false);
-    populate(tractatus,0);
+    atm=tractatus;
+    populate(tractatus,0,true);
   })
 }
 
@@ -107,6 +122,26 @@ function parseKey(keystring){
   var keyClass=keyArray.join('-');
   var keyParent=keyArray.slice(0,keyArray.length-1).join('-');
   return {array:keyArray,display:keyDisplay,dom:keyClass,parent:keyParent}
+}
+
+function changeLang(){
+  console.log(atm);
+  lang=(lang=='en')?'de':'en';
+  d3.selectAll('.active').classed('active',false);
+  d3.select('#'+lang).classed('active',true);
+  if(atm!==undefined){
+    populate(atm,0,true);
+    var crosshair=atm;
+    for(var i=indrecord;i>1;i--){
+      crosshair=crosshair.parent;
+      populate(crosshair,0,false);
+    }
+  }else{
+    handlePreface();
+  }
+  // d3.selectAll('.prop').each(function(d,i){
+  //
+  // })
 }
 
 

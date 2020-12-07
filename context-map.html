@@ -6,6 +6,7 @@
     <title>Another Tractatus Tree</title>
     <!-- stylesheets -->
     <link rel="stylesheet" href="css/clearstyle.css">
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/context-map.css">
     <!-- fonts -->
     <link rel="stylesheet" href="fonts/fonts.css">
@@ -19,13 +20,13 @@
         <h2>Iterations</h2>
         <div class="iteration">
           <h3>Tabs</h3>
-          <a href="https://nchilla.github.io/tractatus-tree/tabs">
+          <a href="tabs.html">
             <img src="assets/tabs-preview.png">
           </a>
         </div>
         <div class="iteration">
           <h3>Context Map</h3>
-          <a href="https://nchilla.github.io/tractatus-tree/context-map">
+          <a href="context-map.html">
             <img src="assets/context-map-preview.png">
           </a>
         </div>
@@ -68,12 +69,13 @@
     <script src="https://unpkg.com/intersection-observer"></script>
     <script src="https://unpkg.com/scrollama"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
-      <script src="js/smoothscroll.min.js"></script>
+    <script src="js/smoothscroll.min.js"></script>
     <script>
       fetch("data/tractatus.json")
         .then(function(tractatus){ return tractatus.json(); })
         .then(function(json){ setUp(json)});
     </script>
+    <script src="js/header.js" charset="utf-8"></script>
     <script src="js/context-map.js" charset="utf-8"></script>
   </body>
 </html>

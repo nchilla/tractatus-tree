@@ -2,23 +2,14 @@
 
 
 :root{
-  --gray:rgba(0, 0, 0,0.05);
-  --extragray:#A0A0A0;
+  --math:rgba(0, 0, 0,0.05);
+  --gray:#A0A0A0;
   --maxwidth:720px;
   --paperpad:40px;
-  --grn:61, 234, 90;
 }
 
-/* typography----------- */
-body{
-  font-size:25px;
-  line-height: 32px;
-}
 
-/* .sheet{
-  font-size:25px;
-  line-height: 30px;
-} */
+
 
 
 
@@ -28,20 +19,20 @@ body{
   font-style: normal;
 }
 .open-children{
-  color: rgba(var(--grn),1);
+  color: var(--tabscolor);
   /* border-bottom:1px solid #3DEA5A; */
   /* margin-left: 5px; */
   cursor:pointer;
 }
 
 .math{
-  background-color: var(--gray);
+  background-color: var(--math);
   padding:3px;
   border-radius: 5px;
 }
 
 table{
-  background-color: var(--gray);
+  background-color: var(--math);
   padding:3px;
   border-radius: 5px;
   font-family: aktiv-grotesk,sans-serif;
@@ -70,146 +61,15 @@ sup{
   font-size: smaller;
 }
 
-/* header window -------- */
-#header-bar{
-  position:fixed;
-  top:50vh;
-  border-top:1px solid var(--gray);
-  /* display:inline-block; */
-  display:none;
-  padding:20px;
-  /* cursor:move; */
-  /* border-radius:10px; */
-  left:50vw;
-  top:50vh;
-  transform:translate(-50%,-50%);
-  box-sizing: border-box;
-  text-align: center;
-}
-
-#header-bar p,svg,span{
-  position:relative;
-  z-index:10;
-}
-#header-bar .math{
-  padding-left: 6px;
-  padding-right: 6px;
-  position:absolute;
-  bottom:0px;
-  right:0;
-  cursor:pointer;
-  opacity:0;
-  width:0;
-}
-
-#head-background{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background-color: white;
-  box-shadow: 5px 5px 24px 0px rgba(0, 0, 0, 0.23);
-  z-index:3;
-}
-
-#title{
-  width: min(max(77vw,616px),900px);
-}
-
-#header-bar p{
-  text-align: center;
-  margin-top:10px;
-  margin-bottom: 20px;
-}
-
-#window-minmax{
-  font-family: aktiv-grotesk,sans-serif;
-  font-size:30px;
-  font-weight: 300;
-  padding-top:2px;
-  position:absolute;
-  z-index:4;
-  top:-20px;
-  left:-20px;
-  border-radius: 50%;
-  background-color: #F6FFCC;
-  box-sizing: border-box;
-  width: 40px;
-  height:40px;
-  box-shadow: 5px 5px 24px 0px rgba(0, 0, 0, 0.1);
-  cursor:pointer;
-}
-
-#header-bar.minimized{
-  top:20px;
-  left:40px;
-  /* right:10px; */
-  transform:translate(0%,0%);
-  /* display:flex; */
-  display:none;
-  flex-flow: row nowrap;
-  border-radius: 20px;
-  padding:10px;
-}
-
-#header-bar.minimized #window-minmax{
-  top:5px;
-  left:-30px;
-  background-color: white;
-}
-
-#header-bar.minimized #head-background{
-  border-radius: 20px;
-}
-
-#header-bar.minimized p{
-  margin-top:0px;
-  margin-bottom:0px;
-  margin-right: 10px;
-  white-space: nowrap;
-}
-#header-bar.minimized p::before{
-  content:'Tractatus | ';
-}
-
-#header-bar.minimized .math{
-  position:relative;
-  display:inline-block;
-}
-
-#header-bar.minimized svg{
-  display:none;
-}
-
 /* outer layout --------------*/
 
-h1{
-  margin-top: 10px;
-  font-family: 'Panama',serif;
-  font-size: 50px;
-  display:block;
-  line-height: 50px;
-}
-#nav{
-  padding:20px;
-  box-sizing: border-box;
-  position:fixed;
-  top:0;
-  left:0;
-  z-index:2;
-  /* background-color:var(--math); */
-  height:100vh;
-  width:100%;
-}
-
-
-#fixed-wrapper{
+#pagewrap{
   z-index:5;
   position:relative;
-  top:100px;
+  top:79px;
+  transition:top 0.6s;
   overflow:hidden;
-  border-top:1px solid var(--extragray);
+  border-top:1px solid var(--gray);
   left:0;
   width:100vw;
   height:100vh;
@@ -217,6 +77,9 @@ h1{
   flex-flow: row nowrap;
   font-family: 'Signifier';
   background-color:white;
+  /* typography */
+  font-size:25px;
+  line-height: 32px;
 }
 
 
@@ -348,7 +211,7 @@ h1{
   :root{
     --paperpad:20px;
   }
-  body{
+  #pagewrap{
     font-size:18px;
     line-height: 25px;
   }
