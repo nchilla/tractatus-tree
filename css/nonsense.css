@@ -49,8 +49,15 @@
 #text6-5-4{
   position:absolute;
   width:560px;
-  height:220px;
+  /* height:220px; */
   padding:10px;
+}
+#text6-5-4>p>span{
+  font-family: aktiv-grotesk,sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  margin-right:10px;
+  display:block;
 }
 p{
   font-family: "Signifier",aktiv-grotesk,sans-serif;

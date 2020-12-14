@@ -28,8 +28,8 @@ Vertices = Matter.Vertices,
 Bounds = Matter.Bounds;
 
 var contents654={
-  en:'<p>My propositions serve as elucidations in the following way: anyone who understands me eventually recognizes them as nonsensical, when he has used them—as steps—to climb up beyond them. (He must, so to speak, throw away the ladder after he has climbed up it.)</p><p>He must transcend these propositions, and then he will see the world aright.</p>',
-  de:'<p>Meine Sätze erläutern dadurch, dass sie der, welcher mich versteht, am Ende als unsinnig erkennt, wenn er durch sie—auf ihnen—über sie hinausgestiegen ist. (Er muss sozusagen die Leiter wegwerfen, nachdem er auf ihr hinaufgestiegen ist.)</p> <p>Er muss diese Sätze überwinden, dann sieht er die Welt richtig.</p>'
+  en:'<p><span>6.54</span>My propositions serve as elucidations in the following way: anyone who understands me eventually recognizes them as nonsensical, when he has used them—as steps—to climb up beyond them. (He must, so to speak, throw away the ladder after he has climbed up it.)</p><p>He must transcend these propositions, and then he will see the world aright.</p>',
+  de:'<p><span>6.54</span>Meine Sätze erläutern dadurch, dass sie der, welcher mich versteht, am Ende als unsinnig erkennt, wenn er durch sie—auf ihnen—über sie hinausgestiegen ist. (Er muss sozusagen die Leiter wegwerfen, nachdem er auf ihr hinaufgestiegen ist.)</p> <p>Er muss diese Sätze überwinden, dann sieht er die Welt richtig.</p>'
 }
 
 // dom
