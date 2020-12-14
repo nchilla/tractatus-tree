@@ -31,12 +31,12 @@
   font-weight: 300;
   font-size:22px;
   line-height: 30px;
-  border-right:1px solid var(--blue);
+  border-right:1px solid var(--threadcolor);
   padding-right:20px;
 }
 
 .prop{
-  border-left:1px solid var(--blue);
+  border-left:1px solid var(--threadcolor);
   padding-left:var(--indent);
 }
 

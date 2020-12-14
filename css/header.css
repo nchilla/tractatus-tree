@@ -4,9 +4,10 @@
   --blue:#CCE8FF;
   --green:#BDFFBA;
   --red:#FF7A7A;
+  --threadcolor:var(--blue);
   --contextmapcolor:var(--green);
   --tabscolor:var(--red);
-  --nonsensecolor:var(--blue);
+  --nonsensecolor:var(--gray);
 }
 
 
@@ -150,7 +151,7 @@ h2,h3{
 } */
 
 .iteration:nth-child(3):hover{
-  --highlighter:var(--blue);
+  --highlighter:var(--threadcolor);
 }
 .iteration:nth-child(4):hover{
   --highlighter:var(--tabscolor);
