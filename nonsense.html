@@ -4,13 +4,13 @@
     <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" >
     <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1">
     <title>Another Tractatus Tree</title>
+    <!-- fonts -->
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="https://use.typekit.net/wlv7asz.css">
     <!-- stylesheets -->
     <link rel="stylesheet" href="css/clearstyle.css">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/tabs.css">
-    <!-- external fonts -->
-    <link rel="stylesheet" href="fonts/fonts.css">
-    <link rel="stylesheet" href="https://use.typekit.net/wlv7asz.css">
+    <link rel="stylesheet" href="css/nonsense.css">
   </head>
   <body>
     <div id="nav">
@@ -59,22 +59,29 @@
       </div>
     </div>
     <div id="pagewrap">
-      <div id='d0' class="sheet"></div>
-      <div id='d1' class="sheet"><div class="tab"><span class='key'></span></div></div>
-      <div id='d2' class="sheet"><div class="tab"><span class='key'></span></div></div>
-      <div id='d3' class="sheet"><div class="tab"><span class='key'></span></div></div>
-      <div id='d4' class="sheet"><div class="tab"><span class='key'></span></div></div>
-      <div id='d5' class="sheet"><div class="tab"><span class='key'></span></div></div>
-      <div id='d6' class="sheet"><div class="tab"><span class='key'></span></div></div>
+      <div id="prop6-5-4" class='prop'>
+        <!-- <div id="debug"></div>
+        <div id="text6-5-4" class='noselect'>
+          <p>My propositions serve as elucidations in the following way: anyone who understands me eventually recognizes them as nonsensical, when he has used them—as steps—to climb up beyond them. (He must, so to speak, throw away the ladder after he has climbed up it.)</p>
+          <p>He must transcend these propositions, and then he will see the world aright.</p>
+        </div>
+        <div id="ceiling" matter></div>
+        <div id="left-wall" matter></div>
+        <div id="right-wall" matter></div>
+        <div id="ground" matter></div> -->
+      </div>
     </div>
-
     <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="js/smoothscroll.min.js"></script>
     <script>
       fetch("data/tractatus.json")
         .then(function(tractatus){ return tractatus.json(); })
         .then(function(json){ setUp(json)});
     </script>
+    <script src="js/matter.js" charset="utf-8"></script>
+    <script src="js/matter-collision-events.min.js"></script>
+    <script src="js/matter-dom-plugin.min.js"></script>
     <script src="js/header.js" charset="utf-8"></script>
-    <script src="js/tabs.js" charset="utf-8"></script>
+    <script src="js/nonsense.js" charset="utf-8"></script>
   </body>
 </html>

@@ -1,7 +1,5 @@
 :root{
   --d-stroke:1px;
-  --gray:#A0A0A0;
-  --math:rgba(0, 0, 0,0.05);
   --diameter:11px;
   /* --green:#BDFFBA; */
 }
@@ -44,6 +42,32 @@ table{
 table tbody{
   border: 5px solid transparent;
 }
+.fnlist{
+  margin-bottom:10px;
+}
+.fnlist tr>td:nth-child(7){
+  border-left: 0px solid black !important;
+  padding-left: 0px;
+}
+
+.fnlist td{
+  padding-top:10px;
+  padding-bottom:10px;
+  border-bottom: 1px solid black;
+}
+.fnlist td:not(.centertight):not(.lefttight):not(.righttight){
+  padding-left: 10px;
+  padding-right:10px;
+  border-left: 1px solid black;
+  /* text-align: center; */
+}
+.righttight {
+  padding-left: 10px;
+}
+/* .lefttight {
+  padding-right: 10px;
+} */
+
 .math>.math{
   background-color:rgba(0,0,0,0);
   padding:0px;

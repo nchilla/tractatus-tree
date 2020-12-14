@@ -1,0 +1,226 @@
+:root{
+  --indent:10px;
+}
+
+
+#pagewrap{
+  border-top:1px solid var(--gray);
+  transition:top 0.6s;
+  width:100vw;
+  box-sizing:border-box;
+  z-index:5;
+  position:relative;
+  top:79px;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  display:flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0px 0px;
+}
+
+.empty>.content .key{
+  display:none;
+}
+
+#i{
+  max-width:720px;
+  font-family: "Signifier",aktiv-grotesk,sans-serif;
+  font-weight: 300;
+  font-size:22px;
+  line-height: 30px;
+  border-right:1px solid var(--blue);
+  padding-right:20px;
+}
+
+.prop{
+  border-left:1px solid var(--blue);
+  padding-left:var(--indent);
+}
+
+.depth1{
+  padding-left:calc(var(--indent)*2);
+  margin-left:var(--indent);
+}
+.depth2{
+  margin-left:calc(var(--indent)*2);
+}
+.depth3{
+  margin-left:calc(var(--indent)*3);
+}
+.depth4{
+  margin-left:calc(var(--indent)*4);
+}
+.depth5{
+  margin-left:calc(var(--indent)*5);
+}
+.depth6{
+  margin-left:calc(var(--indent)*6);
+}
+.depth7{
+  margin-left:calc(var(--indent)*7);
+}
+
+
+#i6-1-2-0-3 svg{
+  width:80%;
+  margin-left:10%;
+  padding-top:20px;
+  padding-bottom:20px;
+}
+/*
+.empty{
+  display:none;
+} */
+
+p{
+  margin-bottom:20px;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+em{
+  font-style: italic;
+}
+sup{
+  vertical-align: super;
+  font-size: smaller;
+}
+.key,.math,.open-children{
+  font-family: aktiv-grotesk,sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.math{
+  background-color: var(--math);
+  padding: 2px 4px;
+  border-radius: 5px;
+}
+
+table{
+  background-color: var(--math);
+  border-radius: 5px;
+  font-family: aktiv-grotesk,sans-serif;
+  font-weight: 300;
+}
+
+.fnlist{
+  margin-bottom:10px;
+}
+.fnlist tr>td:nth-child(7){
+  border-left: 0px solid black !important;
+  padding-left: 0px;
+}
+
+.fnlist td{
+  padding-top:10px;
+  padding-bottom:10px;
+  border-bottom: 1px solid black;
+}
+.fnlist td:not(.centertight):not(.lefttight):not(.righttight){
+  padding-left: 10px;
+  padding-right:10px;
+  border-left: 1px solid black;
+  /* text-align: center; */
+}
+.righttight {
+  padding-left: 10px;
+}
+
+table tbody{
+  border: 5px solid transparent;
+}
+.math>.math{
+  background-color:rgba(0,0,0,0);
+  padding:0px;
+  border-radius: 0px;
+}
+
+
+/* inherited --------*/
+.truthtable:first-child{
+  margin-left:0px;
+}
+
+.truthtable{
+  display:inline-block;
+  margin-left: 30px;
+}
+
+.truthtable td,th{
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top:3px;
+  padding-bottom: 3px;
+  border-right: 1px solid black;
+}
+
+.truthtable th{
+  font-style:italic;
+}
+
+.truthtable tr{
+  border-top:1px solid black;
+}
+
+.possibilities{
+  display: inline-table;
+  vertical-align: middle;
+  border-collapse: collapse;
+  border: none;
+  margin: 0px;
+  padding: 0px;
+  text-indent: 0px;
+}
+td.summationtop {
+    text-align: center;
+    vertical-align: bottom;
+    padding-bottom: 0px;
+}
+td.middleleft{
+    vertical-align: middle;
+}
+td.middleright {
+    vertical-align: middle;
+    text-align: right;
+}
+span.largeparen {
+    font-size: 250%;
+    vertical-align: middle;
+}
+td.middlecenter {
+    vertical-align: middle;
+    text-align: center;
+}
+td.summationmiddle {
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.smallvar {
+    font-size: 80%;
+}
+span.largeop {
+    font-size: 200%;
+}
+/* var{
+  padding-right: 2px;
+} */
+.mathrel,.mathop{
+  /* margin-left: 3px;
+  margin-right: 3px; */
+  padding-bottom: 4px;
+  display: inline-block;
+}
+.centered{
+  text-align: center;
+}
+.sfmiddle{
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

@@ -7,8 +7,8 @@
     <!-- stylesheets -->
     <link rel="stylesheet" href="css/clearstyle.css">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/tabs.css">
-    <!-- external fonts -->
+    <link rel="stylesheet" href="css/thread.css">
+    <!-- fonts -->
     <link rel="stylesheet" href="fonts/fonts.css">
     <link rel="stylesheet" href="https://use.typekit.net/wlv7asz.css">
   </head>
@@ -59,22 +59,19 @@
       </div>
     </div>
     <div id="pagewrap">
-      <div id='d0' class="sheet"></div>
-      <div id='d1' class="sheet"><div class="tab"><span class='key'></span></div></div>
-      <div id='d2' class="sheet"><div class="tab"><span class='key'></span></div></div>
-      <div id='d3' class="sheet"><div class="tab"><span class='key'></span></div></div>
-      <div id='d4' class="sheet"><div class="tab"><span class='key'></span></div></div>
-      <div id='d5' class="sheet"><div class="tab"><span class='key'></span></div></div>
-      <div id='d6' class="sheet"><div class="tab"><span class='key'></span></div></div>
+      <div id="i">
+
+      </div>
     </div>
+
 
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script>
       fetch("data/tractatus.json")
         .then(function(tractatus){ return tractatus.json(); })
-        .then(function(json){ setUp(json)});
+        .then(function(json){ buildBody(json); });
     </script>
     <script src="js/header.js" charset="utf-8"></script>
-    <script src="js/tabs.js" charset="utf-8"></script>
+    <script src="js/thread.js" charset="utf-8"></script>
   </body>
 </html>
