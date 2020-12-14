@@ -126,8 +126,16 @@ function draw(endNode){
 
 
 }
-var charCount=0;
-var highestChar='';
+
+function theSearch(key){
+  var node=d3.select('#i'+key.dom).node();
+  if(node!==null){
+    var scrollingOpt={behavior:'auto',block:'center'};
+    document.querySelector('#i'+key.dom).scrollIntoView(scrollingOpt);
+  }
+}
+
+
 function buildText(object){
   object.children.forEach((item, i) => {
     var key=parseKey(item.data.key);
@@ -138,14 +146,8 @@ function buildText(object){
       .attr('class',`depth${item.depth} prop ${item.depth>1?'child':''} ${item.data.empty==true?'empty':''}`)
       .html(`<span class="key">${key.display}</span>`+(item.data.empty==false?item.data.content[lang]:''))
       .append('div').attr('class','orb');
-
-    let textLength=d3.select('#i'+key.dom).node().textContent.length;
-    if(textLength>charCount){highestChar=d3.select('#i'+key.dom).node().textContent;};
-    charCount=(textLength>charCount)?textLength:charCount;
-
     if(item.children){buildText(item);};
   });
-  console.log(charCount,highestChar);
 }
 
 function observing(){

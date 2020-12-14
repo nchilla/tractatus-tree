@@ -1,4 +1,6 @@
 
+let searchval=[];
+
 function headerStartUp(){
   handleHeader();
   d3.select('#info-button').on('click',function(){
@@ -12,7 +14,37 @@ function headerStartUp(){
     }
   });
   d3.selectAll('.lang-button').on('click',changeLang);
+
+  const search=d3.select('#search').select('input')
+  search.on('input',function(){
+    let val=search.node().value;
+    const num=['0','1','2','3','4','5','6','7','8','9'];
+    let newVal;
+    if(num.includes(event.data)){
+      searchval.push(event.data);
+    }else if(event.data==null){
+      searchval.splice(-1,1);
+    }
+    newVal=parseKeyArray(searchval);
+    search.node().value=newVal.display;
+    theSearch(newVal);
+  })
+
 }
+
+function parseKeyArray(array){
+
+  var keyArray=array;
+  var keyDisplay=[...keyArray];
+  keyDisplay[0]=keyDisplay[0]+'.';
+  keyJs=keyArray.join('.');
+  keyDisplay=keyDisplay.join('');
+  var keyClass=keyArray.join('-');
+  var keyParent=keyArray.slice(0,keyArray.length-1).join('-');
+  return {js:keyJs,array:keyArray,display:(keyArray.length>0)?keyDisplay:'',dom:keyClass,parent:keyParent}
+}
+
+
 
 function changeLangKey(){
   if(event.keyCode == 32 && event.target == document.body) {

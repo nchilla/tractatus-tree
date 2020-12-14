@@ -43,6 +43,13 @@ function fillProp(selection){
   selection.select('.content').html(`<span class="key">${key.display==0?prefacetitle[lang]:key.display}</span>`+(prop.data.empty==false?prop.data.content[lang]:''));
 }
 
+function theSearch(key){
+  var node=d3.select('#i'+key.dom).node();
+  if(node!==null){
+    var scrollingOpt={behavior:'auto',block:'start'};
+    document.querySelector('#i'+key.dom).scrollIntoView(scrollingOpt);
+  }
+}
 
 function parseKey(keystring){
   var keyArray=keystring.split('.');

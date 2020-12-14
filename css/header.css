@@ -169,3 +169,33 @@ h2,h3{
   display:block;
   width:100%;
 }
+
+#search{
+  padding: 10px 10px 10px 10px;
+  box-sizing: border-box;
+  font-family: aktiv-grotesk,sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  display:flex;
+  flex-flow: row nowrap;
+  height:22px;
+}
+#search input{
+  max-width: 120px;
+  height:25px;
+  font-family: aktiv-grotesk,sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  padding-bottom:2px;
+}
+
+#search svg{
+  min-width:22px;
+}
+
+input[type='text'], input[type='text']:focus {
+  border: none;
+  border-bottom: solid var(--gray) 1px;
+  outline: none;
+  /* padding:0px; */
+}

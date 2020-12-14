@@ -107,7 +107,6 @@ function setUp(){
   var overflowing=()=>{return wrapScroll()>wrapHeight()*1.5};
   prop654();
   matterTest();
-
 }
 
 function matterTest(){
@@ -223,9 +222,6 @@ function matterTest(){
 }
 
 
-
-
-
 window.addEventListener('resize',reset654);
 
 function reset654(event){
@@ -253,6 +249,9 @@ function redraw654(bypass){
     matterTest();
   }
 }
+
+
+
 
 
 function changeLang(){

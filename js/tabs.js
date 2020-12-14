@@ -144,6 +144,29 @@ function changeLang(){
   // })
 }
 
+function theSearch(key){
+  locate(key);
+}
+
+function locate(key){
+  let field=tractatus;
+  key.array.forEach((item, i) => {
+    var scopeKey=parseKeyArray(key.array.slice(0,i+1));
+    let temp;
+    for(var x=0;x<field.children.length;x++){
+      if(field.children[x].data.key==scopeKey.js){
+        temp=field.children[x];
+      }
+    }
+    if(temp!==undefined){
+      field=temp;
+    }
+  });
+  if(field.parent!==null){
+    atm=field.parent;
+    populate(field.parent,0,true)
+  }
+}
 
 function toggleWin(){
   var header=d3.select('#header-bar');
