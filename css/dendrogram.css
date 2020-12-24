@@ -28,7 +28,7 @@ sup{
 }
 .math{
   background-color: var(--math);
-  padding: 2px 4px;
+  padding: 1px 2px;
   border-radius: 5px;
 }
 
