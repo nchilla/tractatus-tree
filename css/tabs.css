@@ -257,6 +257,25 @@ sup{
 
 /* inherited --------*/
 
+div.centeredsqueeze {
+    line-height: 0.7;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+#p6-3-6-1-1-1 .noindent{
+  margin: 20px 0px;
+  padding: 10px;
+  white-space: nowrap;
+}
+
+.nudgedown{
+  vertical-align: -0.2ex;
+}
+
+
 .possibilities{
   display: inline-table;
   vertical-align: middle;
