@@ -18,7 +18,7 @@ If you notice any discrepancies with the text please feel free to submit an issu
 Body text is set in [Signifier](https://klim.co.nz/retail-fonts/signifier/) by Kris Sowersby; Numbering and logic statements are set in [Aktiv Grotesk](https://fonts.adobe.com/fonts/aktiv-grotesk) by Dalton Maag; Header is set in [Panama](https://typefaces.temporarystate.net/preview/Panama) by Roman Gornitsky.
 
 
-### Ideas/to-do:
+## Ideas/to-do:
 For **Tabs** iteration:
 - [X] tab markers
 - [x] preface access
