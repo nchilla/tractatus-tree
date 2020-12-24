@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" >
+    <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1">
+    <title>Another Tractatus Tree</title>
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="css/clearstyle.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/dendrogram.css">
+    <!-- fonts -->
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="https://use.typekit.net/wlv7asz.css">
+  </head>
+  <body>
+    <div id="toosmall">
+      <h3>Please resize your browser or move to a device with a larger screen to view this website.</h3>
+    </div>
+    <div id="nav">
+      <div id="info-button" class='noselect'><span>i</span></div>
+      <div id="info">
+        <h1>Tractatus Logico-Philosophicus</h1>
+        <h2>Iterations</h2>
+        <div class="iteration">
+          <h3>Thread</h3>
+          <a href="thread.html">
+            <img src="assets/thread-preview.png">
+          </a>
+        </div>
+        <div class="iteration">
+          <h3>Tabs</h3>
+          <a href="tabs.html">
+            <img src="assets/tabs-preview.png">
+          </a>
+        </div>
+        <div class="iteration">
+          <h3>Dendrogram</h3>
+          <a href="dendrogram.html">
+            <img src="assets/dendrogram-preview.png">
+          </a>
+        </div>
+        <div class="iteration">
+          <h3>Nonsense</h3>
+          <a href="nonsense.html">
+            <img src="assets/nonsense-preview.png">
+          </a>
+        </div>
+        <h2>About</h2>
+        <h3>Ludwig Wittgenstein’s <em>Tractatus Logico-Philosophicus</em> is a landmark philosophical text composed of propositions arranged in a hierarchical structure (e.g. 2, 2.1, 2.1.1, etc). This project aims to explore different methods of presenting and visualizing the <em>Tractatus</em>, with more or less practical utility. I am not the first to have this idea; you can find a collection of predecessors to my project <a href="https://www.are.na/nico-chilla/tractatus-visualizations" target="_blank">here.</a></h3>
+        <h2>Publishing information</h2>
+        <h3>This project can be viewed in either the Pears/McGuinness English translation or the original German. It uses a JSON version of the text scraped by <a href="https://pbellon.github.io/#!/en" target="_blank">Pierre Bellon</a> from <a href="https://people.umass.edu/klement/tlp/tlp.html" target="_blank">Kevin C. Klement’s page</a> and adjusted/cleaned by me. The <em>Tractatus</em> is in the public domain.</h3>
+        <h2>Colophon</h2>
+        <h3>Body text is set in <a href="https://klim.co.nz/retail-fonts/signifier/" target="_blank">Signifier</a> by Kris Sowersby; Numbering and logic statements are set in <a href="https://fonts.adobe.com/fonts/aktiv-grotesk" target="_blank">Aktiv Grotesk</a> by Dalton Maag; Header is set in <a href="https://typefaces.temporarystate.net/preview/Panama" target="_blank">Panama</a> by Roman Gornitsky.</h3>
+        <h2>Development</h2>
+        <h3>This project wouldn't have been possible without the following libraries/plugins: <a href="https://github.com/d3" target="_blank">D3.js</a>, <a href="https://github.com/russellgoldenberg/scrollama" target="_blank">Scrollama</a>, <a href="https://github.com/liabru/matter-js/" target="_blank">Matter.js</a>, <a href="https://github.com/elopezga/matter-dom-plugin" target="_blank">matter-dom-plugin</a>, and <a href="https://github.com/dxu/matter-collision-events" target="_blank">matter-collision-events</a> </h3>
+        <h3>You can browse the GitHub repo for this project <a href="https://github.com/nchilla/tractatus-tree" target="_blank">here</a>, and if you notice any discrepancies with the text please feel free to submit an issue.</h3>
+      </div>
+      <div id="settings">
+        <div id="lang-change">
+          <span class="lang-button active" id="en">en</span> | <span id="de" class="lang-button">de</span>
+        </div>
+        <svg id="gear" width="26.5" height="26.5"><use href="tractatus-files/gear.svg#thegear"></svg>
+        <div id="search">
+          <svg viewBox="0 0 17.083 18.872" id="magnifier" width="22" height="22"><use href="tractatus-files/magnifier.svg#magnifier"></svg>
+            <input type="text" >
+        </div>
+      </div>
+    </div>
+    <div id="pagewrap">
+      <div id="map-wrapper">
+        <div id="map">
+          <svg preserveAspectRatio="none" viewBox="0 0 100 100" >
+              <line id='highlight' vector-effect='non-scaling-stroke' x1="-100" x2="-100" y1="-100" y2="-100"/>
+              <line id='depth1' class='depth' vector-effect='non-scaling-stroke' x1="0" x2="0" y1="0" y2="100"  />
+              <line id='depth2' class='depth' vector-effect='non-scaling-stroke' x1="10" x2="10" y1="0" y2="100"  />
+              <line id='depth3' class='depth' vector-effect='non-scaling-stroke' x1="20" x2="20" y1="0" y2="100"  />
+              <line id='depth4' class='depth' vector-effect='non-scaling-stroke' x1="30" x2="30" y1="0" y2="100"  />
+              <line id='depth5' class='depth' vector-effect='non-scaling-stroke' x1="40" x2="40" y1="0" y2="100"  />
+              <line id='depth6' class='depth' vector-effect='non-scaling-stroke' x1="50" x2="50" y1="0" y2="100"  />
+          </svg>
+          <div id="nodes"></div>
+        </div>
+      </div>
+      <div id="text">
+
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/intersection-observer"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="js/smoothscroll.min.js"></script>
+    <script>
+      fetch("data/tractatus.json")
+        .then(function(tractatus){ return tractatus.json(); })
+        .then(function(json){ setUp(json)});
+    </script>
+    <script src="js/header.js" charset="utf-8"></script>
+    <script src="js/dendrogram.js" charset="utf-8"></script>
+  </body>
+</html>
