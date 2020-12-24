@@ -4,8 +4,6 @@ let recordDist='80px';
 let lang='en';
 let sinceReset=Date.now();
 console.log(sinceReset);
-
-
 // physics (matter js)
 let engine;
 let world;
@@ -26,17 +24,10 @@ World = Matter.World,
 Vector = Matter.Vector,
 Vertices = Matter.Vertices,
 Bounds = Matter.Bounds;
-
-var contents654={
-  en:'<p><span>6.54</span>My propositions serve as elucidations in the following way: anyone who understands me eventually recognizes them as nonsensical, when he has used them—as steps—to climb up beyond them. (He must, so to speak, throw away the ladder after he has climbed up it.)</p><p>He must transcend these propositions, and then he will see the world aright.</p>',
-  de:'<p><span>6.54</span>Meine Sätze erläutern dadurch, dass sie der, welcher mich versteht, am Ende als unsinnig erkennt, wenn er durch sie—auf ihnen—über sie hinausgestiegen ist. (Er muss sozusagen die Leiter wegwerfen, nachdem er auf ihr hinaufgestiegen ist.)</p> <p>Er muss diese Sätze überwinden, dann sieht er die Welt richtig.</p>'
-}
-
 // dom
 const prop=d3.select('#prop6-5-4');
-
 let pagewrap=document.querySelector('#pagewrap');
-
+// tractatus data
 let props={
   en:[
     'The world is all that is the case.',
@@ -57,59 +48,41 @@ let props={
   ]
 
 }
-
-
-
-props.en.forEach((item, i) => {
-  let temp=item.split(' ');
-  temp.forEach((x, ind) => {
-    temp[ind]=x.replace(/_/g,' ');
-  });
-  props.en[i]=temp;
-});
-props.de.forEach((item, i) => {
-  let temp=item.split(' ');
-  temp.forEach((x, ind) => {
-    temp[ind]=x.replace(/_/g,' ');
-  });
-  props.de[i]=temp;
-});
-
-function prop654(){
-  props[lang].forEach((prop, i) => {
-    prop.forEach((segment, x) => {
-      // let el=document.createElement('span');
-      d3.select('#prop6-5-4').append('span')
-      .attr('class','segment noselect')
-      .attr('id','seg'+i+'-'+x)
-      .attr('matter','')
-      .html(segment)
-
-      // const content = document.createTextNode(segment);
-      // el.appendChild(content);
-      // el.setAttribute('matter', '');
-      // el.setAttribute('id', 'seg'+i+'-'+x);
-      // el.setAttribute('class', 'segment noselect');
-      // document.querySelector('#prop6-5-4').appendChild(el);
-    });
-  });
+var contents654={
+  en:'<p><span>6.54</span>My propositions serve as elucidations in the following way: anyone who understands me eventually recognizes them as nonsensical, when he has used them—as steps—to climb up beyond them. (He must, so to speak, throw away the ladder after he has climbed up it.)</p><p>He must transcend these propositions, and then he will see the world aright.</p>',
+  de:'<p><span>6.54</span>Meine Sätze erläutern dadurch, dass sie der, welcher mich versteht, am Ende als unsinnig erkennt, wenn er durch sie—auf ihnen—über sie hinausgestiegen ist. (Er muss sozusagen die Leiter wegwerfen, nachdem er auf ihr hinaufgestiegen ist.)</p> <p>Er muss diese Sätze überwinden, dann sieht er die Welt richtig.</p>'
 }
 
+function wordFragments(){
+  //this splits the strings from the props into word fragments
+  props.en.forEach((item, i) => {
+    let temp=item.split(' ');
+    temp.forEach((x, ind) => {
+      temp[ind]=x.replace(/_/g,' ');
+    });
+    props.en[i]=temp;
+  });
+  props.de.forEach((item, i) => {
+    let temp=item.split(' ');
+    temp.forEach((x, ind) => {
+      temp[ind]=x.replace(/_/g,' ');
+    });
+    props.de[i]=temp;
+  });
+  //then this adds the fragments to the dom
+  prop654();
+}
 
-
-
+window.addEventListener('load',setUp);
 
 function setUp(){
-  console.log('hello');
+  wordFragments();
   headerStartUp();
-  let wrapHeight=()=>{return pagewrap.clientHeight;};
-  let wrapScroll=()=>{return pagewrap.scrollHeight;};
-  var overflowing=()=>{return wrapScroll()>wrapHeight()*1.5};
-  prop654();
-  matterTest();
+  matterRun();
 }
 
-function matterTest(){
+function matterRun(){
+  //this does the physics effect
   prop.append('div').attr('id','debug');
   prop.append('div').attr('id','text6-5-4').attr('class','noselect').html(contents654[lang]);
   prop.append('div').attr('id','ceiling');
@@ -221,9 +194,8 @@ function matterTest(){
   World.add(world, MouseConstraint);
 }
 
-
+//monitors resize events and decides whether to redraw physics effect with new window size
 window.addEventListener('resize',reset654);
-
 function reset654(event){
   if(event!==undefined){
     setTimeout(function () {redraw654(false);}, 100);
@@ -233,6 +205,20 @@ function reset654(event){
   }
 }
 
+//this repopulates the dom with word fragments
+function prop654(){
+  props[lang].forEach((prop, i) => {
+    prop.forEach((segment, x) => {
+      d3.select('#prop6-5-4').append('span')
+      .attr('class','segment noselect')
+      .attr('id','seg'+i+'-'+x)
+      .attr('matter','')
+      .html(segment)
+    });
+  });
+}
+
+// redraws the physics effects whenever necessary
 function redraw654(bypass){
   prop.html('');
   console.log(bypass);
@@ -241,23 +227,14 @@ function redraw654(bypass){
     Engine.clear(engine);
     RenderDom.stop(render);
     Runner.stop(runner);
-    // render.canvas.remove();
-    // render.canvas = null;
-    // render.context = null;
-    // render.textures = {};
     prop654();
-    matterTest();
+    matterRun();
   }
 }
-
-
-
-
 
 function changeLang(){
   lang=(lang=='en')?'de':'en';
   d3.selectAll('.active').classed('active',false);
   d3.select('#'+lang).classed('active',true);
   reset654();
-  // console.log('sadness');
 }
