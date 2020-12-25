@@ -28,7 +28,7 @@ For **Tabs** iteration:
 - [X] way to search for props, and URL queries
 - [X] some information about the project and translation in header
 
-For **Context Map** iteration:
+For **Dendrogram** iteration:
 - [X] A flexible width dendrogram showing you only the nodes and depths that are relevant to the context of the proposition you are reading
 - [X] The map redraws itself according to which proposition is focused on screen, using Russell Goldenberg's [Scrollama](https://github.com/russellgoldenberg/scrollama/)
 - [X] Add Preface to text and visualize it somewhere.
