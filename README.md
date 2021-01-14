@@ -1,8 +1,7 @@
 # Another Tractatus Tree
 
 ## About
-Ludwig Wittgenstein’s *Tractatus Logico-Philosophicus* is a landmark philosophical text composed of propositions arranged in a hierarchical structure (e.g. 2, 2.1, 2.1.1, etc). This project aims to explore different methods of presenting and visualizing the *Tractatus*, with more or less practical utility. I am not the first to have this idea; you can find a collection of predecessors to my project [here](https://www.are.na/nico-chilla/tractatus-visualizations).
-
+Ludwig Wittgenstein’s *Tractatus Logico-Philosophicus* is a landmark philosophical text composed of propositions in a tree structure (e.g. 2, 2.1, 2.1.1, etc). This website explores different methods of reading and visualizing the *Tractatus’* hierarchy, with more or less practical utility. I am not the first to have this idea; you can find a collection of predecessors to my project [here](https://www.are.na/nico-chilla/tractatus-visualizations). Also, we’re now on [FontsInUse](https://fontsinuse.com/uses/37700/tractatus-logico-philosophicus-website)!
 
 ## Publishing information
 This project can be viewed in either the Pears/McGuinness English translation or the original German. It uses a JSON version of the text scraped by [Pierre Bellon](https://pbellon.github.io/#!/en) from [Kevin C. Klement’s page](https://people.umass.edu/klement/tlp/tlp.html) and adjusted/cleaned by me. The *Tractatus<* is in the public domain.
